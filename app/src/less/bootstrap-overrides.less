@@ -1,0 +1,428 @@
+/*---------------------------------------------------
+    BOOTSTRAP OVERRIDES
+  ---------------------------------------------------
+    bootstrap styles reloaded
+  ---------------------------------------------------*/
+
+.h1, .h2, .h3, h1, h2, h3,
+.h4, .h5, .h6, h4, h5, h6 {
+  color: @h-color;
+  text-transform: uppercase;
+}
+
+.h1, h1 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.h2, h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.h3, h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.h4, h4 {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.h5, h5 {
+  font-size: 12px;
+  margin-top: 15px;
+}
+.h6, h6 {
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+b, strong, dt, label {
+  font-weight: 400;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  color: darken(@widget-text-color, 5%);
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.label-as-badge {
+    border-radius: 1em;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  z-index: 2;
+  color: @widget-text-color;
+  cursor: default;
+  background-color: @color-primary;
+  border-color: transparent;
+}
+.pagination>li>a, .pagination>li>span {
+  color: @color-primary;
+}
+
+.badge {
+  font-weight: normal;
+}
+.navbar-default {
+  border-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: @color-primary;
+  color: @widget-text-color;
+  border-color: @color-primary;
+}
+.navbar-toggle, .close {
+  outline:0;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.panel textarea, .well textarea, textarea.form-control
+{
+   resize: none;
+}
+
+.well, .well-lg, .well-sm {
+  .border-radius(2px);
+  border-color: lighten(@color-primary, 35%);
+}
+
+.form-control {
+  .border-radius(0px);
+  .box-shadow(none);
+  border: solid 1px @form-border;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control, .input-group-addon {
+  background-color: #f1f0f0;
+}
+.input-group-addon {
+  border: solid 1px @form-border;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+select:active, 
+input:active, 
+textarea:focus, 
+select:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    .box-shadow(none)!important;
+}
+.btn {
+  margin-bottom: 5px;
+  .transition(200ms, 'background-color', linear);
+  .border-radius(2px);
+  background: @btn-bg;
+  border: solid 1px @btn-bg;
+}
+.btn:hover {
+  background: darken(@btn-bg, 5%);
+}
+.btn-default {
+  color: inherit;
+  border: solid 1px @btn-bg;
+}
+.btn-default.dropdown-toggle,
+.input-group-btn .btn-default {
+  border: solid 1px @form-border;
+}
+.btn-primary, .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover,
+.label-primary {
+  background-color: @color-primary;
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-primary:hover {
+  background-color: darken(@color-primary, 5%);
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-success, .list-group-item-success,
+.table>tbody>tr.success>td, .table>tbody>tr.success>th, .table>tbody>tr>td.success, .table>tbody>tr>th.success, .table>tfoot>tr.success>td, .table>tfoot>tr.success>th, .table>tfoot>tr>td.success, .table>tfoot>tr>th.success, .table>thead>tr.success>td, .table>thead>tr.success>th, .table>thead>tr>td.success, .table>thead>tr>th.success, 
+.label-success {
+  background-color: @color-success;
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-success:hover {
+  background-color: darken(@color-success, 5%);
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-info, .list-group-item-info,
+.table>tbody>tr.info>td, .table>tbody>tr.info>th, .table>tbody>tr>td.info, .table>tbody>tr>th.info, .table>tfoot>tr.info>td, .table>tfoot>tr.info>th, .table>tfoot>tr>td.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>thead>tr.info>th, .table>thead>tr>td.info, .table>thead>tr>th.info, 
+.label-info {
+  background-color: @color-info;
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-info:hover {
+  background-color: darken(@color-info, 5%);
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-warning, .list-group-item-warning,
+.table>tbody>tr.warning>td, .table>tbody>tr.warning>th, .table>tbody>tr>td.warning, .table>tbody>tr>th.warning, .table>tfoot>tr.warning>td, .table>tfoot>tr.warning>th, .table>tfoot>tr>td.warning, .table>tfoot>tr>th.warning, .table>thead>tr.warning>td, .table>thead>tr.warning>th, .table>thead>tr>td.warning, .table>thead>tr>th.warning, 
+.label-warning {
+  background-color: @color-warning;
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-warning:hover {
+  background-color: darken(@color-warning, 5%);
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-danger, .list-group-item-danger,
+.table>tbody>tr.danger>td, .table>tbody>tr.danger>th, .table>tbody>tr>td.danger, .table>tbody>tr>th.danger, .table>tfoot>tr.danger>td, .table>tfoot>tr.danger>th, .table>tfoot>tr>td.danger, .table>tfoot>tr>th.danger, .table>thead>tr.danger>td, .table>thead>tr.danger>th, .table>thead>tr>td.danger, .table>thead>tr>th.danger, 
+.label-danger {
+  background-color: @color-danger;
+  border-color: transparent;
+  color: @widget-text-color;
+}
+.btn-danger:hover {
+  background-color: darken(@color-danger, 5%);
+  border-color: transparent;
+  color: @widget-text-color;
+}
+
+a.btn-danger, a.btn-warning, a.btn-success, a.btn-primary, a.btn-info { color: @widget-text-color; }
+.input-group-addon {
+  .border-radius(0px);
+  background-color: @btn-bg;
+  border-color: @form-border;
+  font-weight: 300;
+}
+.btn:active, .btn:visited {
+  outline: none!important;
+}
+.input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+  .border-radius(0px);
+}
+.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn {
+  .border-radius(0px);
+}
+select.input-lg {
+  .border-radius(0px);
+}
+.has-feedback label~.form-control-feedback {
+  top: 35px;
+}
+.has-success .form-control {
+  .box-shadow(none);
+  border-color: @color-success;
+}
+.has-success .form-control-feedback {
+  color: @color-success;
+}
+.has-success .input-group-addon {
+  background: @color-success;
+  color: @widget-text-color;
+  border-color: @color-success;
+}
+.has-warning .form-control {
+  .box-shadow(none);
+  border-color: @color-warning;
+}
+.has-warning .form-control-feedback {
+  color: @color-warning;
+}
+.has-warning .input-group-addon {
+  background: @color-warning;
+  color: @widget-text-color;
+  border-color: @color-warning;
+}
+.has-error .form-control {
+  .box-shadow(none);
+  border-color: @color-danger;
+}
+.has-error .form-control-feedback {
+  color: @color-danger;
+}
+.has-error .input-group-addon {
+  background: @color-danger;
+  color: @widget-text-color;
+  border-color: @color-danger;
+}
+.list-group {
+  .border-radius(0px);
+}
+.list-group-item:first-child {
+  .border-radius(0px);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+.list-group-item:last-child {
+  .border-radius(0px);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+.panel>.list-group:last-child .list-group-item:last-child, .panel>.panel-collapse>.list-group:last-child .list-group-item:last-child {
+  .border-radius(0px);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+.nav {
+  border: none;
+}
+.tab-content>.tab-pane {
+  padding-top: 15px;
+}
+
+.progress {
+  height: 8px;
+  .box-shadow(none);
+  .border-radius(2px);
+}
+
+.progress-bar {
+  .box-shadow(none);
+  background-color: @color-primary;
+}
+.progress-bar.progress-bar-success {
+  background-color: @color-success;
+}
+.progress-bar.progress-bar-info {
+  background-color: @color-info;
+}
+.progress-bar.progress-bar-warning {
+  background-color: @color-warning;
+}
+.progress-bar.progress-bar-danger {
+  background-color: @color-danger;
+}
+.progress.progress-with-label {
+  height: 19px;
+}
+.progress.progress-with-label .progress-bar {
+  font-size: 10px;
+}
+
+.panel-group .panel+.panel {
+  margin-top: 0px;
+  .border-radius(0px);
+}
+
+.alert {
+  .border-radius(2px);
+}
+.alert-primary {
+  color: @widget-text-color;
+  background-color: @color-primary;
+  border-color: transparent;
+}
+.alert-success {
+  color: @widget-text-color;
+  background-color: @color-success;
+  border-color: transparent;
+}
+.alert-info {
+  color: @widget-text-color;
+  background-color: @color-info;
+  border-color: transparent;
+}
+.alert-warning {
+  color: @widget-text-color;
+  background-color: @color-warning;
+  border-color: transparent;
+}
+.alert-danger {
+  color: @widget-text-color;
+  background-color: @color-danger;
+  border-color: transparent;
+}
+.alert a,
+.alert-primary a,
+.alert-success a,
+.alert-info a,
+.alert-warning a,
+.alert-danger a {
+  color: @widget-text-color;
+  font-weight: 600;
+  display: inline-block;
+  border-bottom: dotted 1px @widget-text-color;
+}
+[data-notify="progressbar"] {
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  .border-radius(0px);
+}
+
+.close {
+  font-weight: 700;
+  font-size: 14px;
+  opacity: .5;
+  color: @widget-text-color;
+}
+.close:hover {
+  color: @widget-text-color;
+  opacity: .8;
+}
+
+.nav-tabs>li {
+  margin-bottom: 0px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border-color:transparent;
+  background-color: @color-primary;
+  color: @widget-text-color;
+}
+.nav-tabs>li>a:focus, .nav-tabs>li>a:hover {
+  border-color: transparent;
+  background-color: @color-primary;
+  color: @widget-text-color;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  border-color: transparent;
+  background-color: @color-primary;
+  color: @widget-text-color;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border-top: none;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  .border-radius(2px);
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  .border-radius(2px);
+}
+.breadcrumb {
+  .border-radius(2px);
+}
+
+.text-primary {
+  color: @color-primary;
+}
+.text-success {
+  color: @color-success;
+}
+.text-info {
+  color: @color-info;
+}
+.text-warning {
+  color: @color-warning;
+}
+.text-danger {
+  color: @color-danger;
+}
+
+.label {
+  font-weight: 300;
+  padding: 3px 3px 2px;
+}

@@ -1,0 +1,133 @@
+/*---------------------------------------------------
+    MAIL / MESSAGE STUFF
+  ---------------------------------------------------
+    Styles for the message inbox / compose page
+    and widget
+  ---------------------------------------------------*/
+
+.messages-table {
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:visited, a:active {
+    text-decoration: none;
+  }
+  
+  .icons {
+    width: 70px;
+
+    input {
+      float: left;
+    }
+    .ti-star {
+      padding-top: 2px;
+      cursor: pointer;
+    }
+  }
+
+  .starred {
+    .ti-star {
+      color: @color-warning;
+    }
+  }
+
+  .from {
+    padding-right: 30px;
+    width: 150px;
+
+    div {
+      height: 22px;
+      display: block;
+      overflow: hidden;
+    }
+
+    a {
+      display: block;
+    }
+
+  }
+
+  .subject {
+
+    div {
+      height: 22px;
+      display: block;
+      overflow: hidden;
+    }
+
+    .label {
+      margin-right: 5px;
+      font-weight: 300;
+    }
+
+  }
+
+  .summary {
+    text-overflow: ellipsis;
+    color: lighten(@p-color, 20%);
+
+    div {
+      height: 22px;
+      display: block;
+      overflow: hidden;
+    }
+
+    a {
+      display: block;
+    }
+
+  }
+
+  .date-time {
+    width: 90px;
+  }
+
+  .unread {
+
+    .from, .subject, .date-time {
+      font-weight: 400;
+      color: darken(@p-color, 30%);
+    }
+
+  }
+
+}
+
+.mail-sender {
+  height: 60px; 
+  text-transform: none!important;
+
+  .img-container {
+    width: 40px;
+    overflow: hidden;
+    height: 40px;
+    .border-radius(50px);
+    margin-right: 10px;
+
+    img {
+      max-height: 45px;
+      min-height: 40px;
+      min-width: 40px;
+      width: auto;
+    }
+
+  }
+
+  .data-container {
+    font-size: 12px;
+    padding-top: 3px;
+    
+    .from {
+      display: block;
+      font-size: 14px;
+    }
+    .email {
+      font-weight: 300!important;
+    }
+
+  }
+
+}

@@ -1,0 +1,945 @@
+/*---------------------------------------------------
+    WIDGETS
+  ---------------------------------------------------
+    widgets for the dashboard and other pages
+  ---------------------------------------------------*/
+
+/* TEXT */
+
+.text-widget {
+  .transition(100ms, linear);
+  display:block;
+  min-height:140px;
+  color: @widget-text-color;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  .icon {
+    .transition(100ms, linear);
+    font-size: 150px;
+    position: absolute;
+    right: -0px;
+    bottom: -75px;
+    z-index: 0;
+  }
+
+  header {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    z-index: 10;
+    position: absolute;
+  }
+
+  small {
+    position: absolute;
+    z-index: 10;
+    top: 45px;
+  }
+
+  &.nano {
+    min-height:85px;
+  }
+  &:hover,
+  &:active,
+  &:visited {
+    color: @widget-text-color;
+  }
+
+  &.color-1 { 
+    background: @widget-color-1; 
+    .icon { color: lighten(@widget-color-1, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-1, 2.5%); 
+      & .icon { color: @widget-color-1; }
+    }
+  }
+  &.color-2 { 
+    background: @widget-color-2; 
+    .icon { color: lighten(@widget-color-2, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-2, 2.5%); 
+      & .icon { color: @widget-color-2; }
+    }
+  }
+  &.color-3 { 
+    background: @widget-color-3; 
+    .icon { color: lighten(@widget-color-3, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-3, 2.5%); 
+      & .icon { color: @widget-color-3; }
+    }
+  }
+  &.color-4 { 
+    background: @widget-color-4; 
+    .icon { color: lighten(@widget-color-4, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-4, 2.5%); 
+      & .icon { color: @widget-color-4; }
+    }
+  }
+  &.color-5 { 
+    background: @widget-color-5; 
+    .icon { color: lighten(@widget-color-5, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-5, 2.5%); 
+      & .icon { color: @widget-color-5; }
+    }
+  }
+  &.color-6 { 
+    background: @widget-color-6; 
+    .icon { color: lighten(@widget-color-6, 2.5%); }
+    &:hover { 
+      background: darken(@widget-color-6, 2.5%); 
+      & .icon { color: @widget-color-6; }
+    }
+  }
+
+} 
+
+
+/* WEATHER */
+
+.weather-widget {
+  margin-bottom: 20px;
+
+  .main-block {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 0px;
+    display: block;
+    
+    
+    .curr-day {
+      display: block;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-bottom: solid 1px @p-color;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .date-time {
+      border-bottom: solid 1px @p-color;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      display: block;
+      overflow: auto;
+
+      .curr-date, .curr-time {
+        font-size: 10px;
+      }
+      .curr-date {
+        width: 50%;
+        float: left;
+        text-align: left;
+      }
+      .curr-time {
+        width: 50%;
+        float: right;
+        text-align: right;
+      }
+    
+    }
+
+    .curr-weather {
+      display: block;
+      border-bottom: solid 1px @p-color;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      display: block;
+      overflow: auto;
+
+      .left {
+        width: 50%;
+        float: left;
+        text-align: left;
+
+        .curr-location {
+          font-size: 14px;
+          font-weight: 400;
+          display: block;
+        }
+
+        .curr-temp {
+          font-size: 50px;
+          font-weight: 300;
+          display: block;
+          line-height: 54px;
+
+        }
+
+        .curr-status {
+          margin-top: -5px;
+          display: block;
+        }
+
+      }
+
+      .right {
+        width: 50%;
+        float: right;
+        text-align: right;
+
+        i {
+          font-size: 62px;
+          float: right;
+          font-weight: 300;
+
+        }
+
+      }
+
+    }
+
+    .curr-other-stats {
+      display: block;
+      overflow: auto;
+      font-size: 10px;
+
+      .left, .right {
+        list-style: none;
+        padding: 0px;
+        display: inline-block;
+        margin-bottom: 0px;
+
+        li {
+          padding-bottom: 5px;
+        }
+
+        li:last-child {
+          padding-bottom: 0px;
+        }
+
+      }
+
+      .left {
+        float: left;
+
+      }
+
+      .right {
+        float: right;
+
+      }
+
+    }
+
+  }
+
+  .rest-of-week {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    li {
+      background: #fff;
+      margin-top: 5px;
+      padding:10px 15px;
+      font-weight: 400;
+      position: relative;
+
+      i {
+        right: 10px;
+        top: 8px;
+        font-size: 18px;
+        position: absolute;
+      }
+
+    }
+
+  }
+
+  &.color-1, &.color-2, &.color-3, &.color-4, &.color-5, &.color-6 {
+    .main-block {
+      .curr-day { border-bottom: solid 1px @widget-text-color; }
+      .date-time { border-bottom: solid 1px @widget-text-color; }
+      .curr-weather { border-bottom: solid 1px @widget-text-color; }
+    }
+  }
+
+  &.color-1 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-1; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-1, 5%); }
+  }
+  &.color-2 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-2; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-2, 5%); }
+  }
+  &.color-3 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-3; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-3, 5%); }
+  }
+  &.color-4 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-4; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-4, 5%); }
+  }
+  &.color-5 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-5; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-5, 5%); }
+  }
+  &.color-6 { 
+    color: #fff;
+    .main-block, .rest-of-week li { background: @widget-color-6; }
+    .rest-of-week li:nth-child(odd) { background: lighten(@widget-color-6, 5%); }
+  }
+
+}
+
+/* ToDo */
+
+.todo-widget {
+  margin-bottom: 20px;
+
+  .list-group {
+
+    li {
+      border-left: solid 3px transparent;
+
+      .checkbox {
+        > label {
+          display: block;
+          padding: 0px;
+          width: 100%;
+
+          input {
+
+          }
+
+          input:checked + label {
+            text-decoration: line-through;
+          }
+
+        }
+      }
+
+      i {
+        float: right;
+        display: inline-block;
+        margin-top: 3px;
+      }
+
+    }
+    li.finished {
+      border-left: solid 3px @widget-color-3;
+      text-decoration: line-through;
+    }
+
+  }
+
+}
+
+
+/* CHART */
+.chart-widget {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+
+  .panel-body {
+    overflow: hidden!important;
+    position: relative;
+    height: 70px;
+
+    .inlinesparkline-bar-widget {
+      overflow: hidden;
+      position: absolute;
+      height: 40px;
+      left: 15px;
+      right: 15px;
+
+      canvas {
+        position: absolute;
+        right: 0px;
+      }
+
+    }
+
+  }
+
+  .text-overylay {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+
+    span {
+        font-size: 50px;
+        height: 50px;
+        display: inline-block;
+        line-height: 54px;
+
+      i {
+        font-size: 40px;
+        margin-right: 5px;
+      }
+
+    }
+
+  }
+
+  .text-overylay.pull-right {
+    left: auto;
+    right: 15px;
+    text-align: right;
+  }
+
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding: 0px;
+  }
+
+  .line-chart-widget {
+
+  }
+
+  .chart-widget-container {
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    margin-top: 10px;
+  }
+
+
+  &.color-1 {
+    background: @widget-color-1;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-1, 2.5%);
+    }
+  }
+  &.color-2 {
+    background: @widget-color-2;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-2, 2.5%);
+    }
+  }
+  &.color-3 {
+    background: @widget-color-3;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-3, 2.5%);
+    }
+  }
+  &.color-4 {
+    background: @widget-color-4;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-4, 2.5%);
+    }
+  }
+  &.color-5 {
+    background: @widget-color-5;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-5, 2.5%);
+    }
+  }
+  &.color-6 {
+    background: @widget-color-6;
+    .text-overylay { color: @widget-text-color; }
+
+    &:hover {
+      background: darken(@widget-color-6, 2.5%);
+    }
+  }
+
+}
+
+.pie-chart-widget {
+
+  .chart-widget-container {
+      margin-left: -5px;
+      margin-top: 15px;
+      margin-bottom: 10px!important;
+      text-align: right!important;
+      margin-right: 15px!important;
+  }
+
+}
+
+.knob-clock-widget {
+  margin-bottom: 20px;
+  
+  div {
+    margin-right: 10px;
+  }
+}
+
+
+
+.message-widget {
+  margin-bottom: 20px;
+  
+  .list-group {
+    border-bottom: none;
+
+    li {
+      border-left: solid 3px transparent;
+      border-right: solid 1px transparent;
+
+      a {
+        display: block;
+        text-decoration: none!important;
+      }
+      a:active, a:visited {
+        text-decoration: none!important;
+      }
+      .from {
+        display: inline-block;
+      }
+      i {
+      }
+      i:hover, i.selected {
+        color: @color-warning;
+      }
+      .label {
+        font-weight: 300;
+      }
+      p {
+        font-weight: 300;
+        margin-bottom: 0px;
+        margin-top: 5px;
+        color: @p-color;
+      }
+
+    }
+
+    li:first-child {
+      border-top: none;
+    }
+
+    li.unread {
+      border-left: solid 3px @color-success;
+
+      .from {
+        font-weight: 400;
+        color: darken(@p-color, 30%);
+      }
+
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+  ul.view-all {
+    border-top: none;
+
+    li {
+      border-left: solid 3px @color-info!important;
+      font-size: 12px;
+      padding: 0px;
+
+      a {
+        display: block;
+        padding: 10px 15px;
+      }
+      a:hover {
+        background-color: @color-primary;
+        color:@widget-text-color;
+      }
+
+    }
+  }
+
+}
+
+
+
+.card {
+  padding-top: 20px;
+  margin: 0 0 30px 0;
+  background-color: #ffffff;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  .border-radius(2px);
+  .box-shadow(none);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color:#ffffff;
+
+    .cardheader {
+      background: url("http://lorempixel.com/850/280/nature/8/");
+      background-size: cover;
+      height: 135px;
+    }
+
+    .avatar {
+      position: relative;
+      top: -50px;
+      margin-bottom: -50px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 5px solid rgba(255,255,255,0.5);
+      }
+
+    }
+
+    &.no-image {
+      padding-top: 25px;
+
+      .title {
+        small {
+          font-size: 12px;
+        }
+      }
+      .avatar {
+        top: 15px;
+        margin-bottom: 25px;
+      }  
+      .bottom {
+        padding-top: 25px;
+      }
+    }
+
+    .info {
+      padding: 4px 8px 10px;
+
+      .title {
+        margin-bottom: 4px;
+        font-size: 24px;
+        line-height: 1;
+        vertical-align: middle;
+      }
+
+      .desc {
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 20px;
+        text-overflow: ellipsis;
+      }
+
+    }
+
+    .bottom {
+      padding: 0 20px;
+      margin-bottom: 17px;
+    }
+
+  }
+
+  &.card-primary {
+    background-color: @color-primary;
+    color: @widget-text-color;
+    .info {
+      .title {
+        a {
+          color: @widget-text-color;
+        }
+      }
+    }
+  }
+  &.card-info {
+    background-color: @color-info;
+    color: @widget-text-color;
+    .info {
+      .title {
+        a {
+          color: @widget-text-color;
+        }
+      }
+    }
+  }
+  &.card-success {
+    background-color: @color-success;
+    color: @widget-text-color;
+    .info {
+      .title {
+        a {
+          color: @widget-text-color;
+        }
+      }
+    }
+  }
+  &.card-warning {
+    background-color: @color-warning;
+    color: @widget-text-color;
+    .info {
+      .title {
+        a {
+          color: @widget-text-color;
+        }
+      }
+    }
+  }
+  &.card-danger {
+    background-color: @color-danger;
+    color: @widget-text-color;
+    .info {
+      .title {
+        a {
+          color: @widget-text-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* carousel */
+.widget-carousel {
+  .carousel 
+  {
+    padding: 0 10px 30px 10px;
+    margin-top: 0px;
+
+    .carousel-control
+    {
+      background: none;
+      background-image: none!important;
+      color: @p-color;
+      font-size: 2.3em;
+      text-shadow: none;
+      margin-top: 37px;
+      width: 35px;
+
+      &.left 
+      {
+        left: -12px;
+      }
+      &.right 
+      {
+        right: -12px !important;
+      }
+    }
+    .carousel-indicators 
+    {
+      right: 50%;
+      top: auto;
+      bottom: -10px;
+      margin-right: -19px;
+
+      li 
+      {
+        background: #c0c0c0;
+      }
+      .active 
+      {
+        background: #333333;
+      }
+    }
+    img
+    {
+      width: 250px;
+      height: 100px
+    }
+
+  }
+
+  .item blockquote {
+    border-left: none; 
+    margin: 0;
+    padding: 10px 5px;
+  }
+
+  .item blockquote img {
+    margin-bottom: 10px;
+  }
+
+  &.carousel-primary {
+    .panel-body {
+      background-color: @color-primary;
+      color: @widget-text-color;
+
+      small {
+        color: @widget-text-color;
+      }
+      .carousel-control {
+        color: @widget-text-color!important;
+      }
+      .carousel-indicators 
+      {
+        li 
+        {
+          background: darken(@color-primary, 10%)!important;
+          border: transparent!important;
+        }
+        .active 
+        {
+          border: transparent!important;
+          background: #fff!important;
+        }
+      }
+    }
+  }
+  &.carousel-success {
+    .panel-body {
+      background-color: @color-success;
+      color: @widget-text-color;
+
+      small {
+        color: @widget-text-color;
+      }
+      .carousel-control {
+        color: @widget-text-color!important;
+      }
+      .carousel-indicators 
+      {
+        li 
+        {
+          background: darken(@color-success, 10%)!important;
+          border: transparent!important;
+        }
+        .active 
+        {
+          border: transparent!important;
+          background: #fff!important;
+        }
+      }
+    }
+  }
+  &.carousel-info {
+    .panel-body {
+      background-color: @color-info;
+      color: @widget-text-color;
+
+      small {
+        color: @widget-text-color;
+      }
+      .carousel-control {
+        color: @widget-text-color!important;
+      }
+      .carousel-indicators 
+      {
+        li 
+        {
+          background: darken(@color-info, 10%)!important;
+          border: transparent!important;
+        }
+        .active 
+        {
+          border: transparent!important;
+          background: #fff!important;
+        }
+      }
+    }
+  }
+  &.carousel-warning {
+    .panel-body {
+      background-color: @color-warning;
+      color: @widget-text-color;
+
+      small {
+        color: @widget-text-color;
+      }
+      .carousel-control {
+        color: @widget-text-color!important;
+      }
+      .carousel-indicators 
+      {
+        li 
+        {
+          background: darken(@color-warning, 10%)!important;
+          border: transparent!important;
+        }
+        .active 
+        {
+          border: transparent!important;
+          background: #fff!important;
+        }
+      }
+    }
+  }
+  &.carousel-danger {
+    .panel-body {
+      background-color: @color-danger;
+      color: @widget-text-color;
+
+      small {
+        color: @widget-text-color;
+      }
+      .carousel-control {
+        color: @widget-text-color!important;
+      }
+      .carousel-indicators 
+      {
+        li 
+        {
+          background: darken(@color-danger, 10%)!important;
+          border: transparent!important;
+        }
+        .active 
+        {
+          border: transparent!important;
+          background: #fff!important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  #quote-carousel 
+  {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
+    
+}
+@media (max-width: 768px) { 
+  #quote-carousel .carousel-indicators {
+    bottom: -20px !important;  
+
+    li {
+      display: inline-block;
+      margin: 0px 5px;
+      width: 15px;
+      height: 15px;
+
+      &.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.quicklinks-widget {
+  margin-bottom: 20px;
+
+  &.quicklinks-large {
+
+    .btn-group {
+      .btn {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,315 @@
+/*---------------------------------------------------
+    TOP NAVIGATION
+  ---------------------------------------------------
+    styles for the top navigation navbar
+    located in the #main block
+  ---------------------------------------------------*/
+
+.navbar-top {
+  
+  background-color: @nav-bg;
+  color: @p-color;
+  border-width: 0;
+  top: 0;
+  position: fixed;
+  width: inherit;
+  left: 250px;
+  right: 0px;
+  height: 50px;
+  
+  .navbar-search-block {
+    background-color: @body-bg;
+    width: 120px;
+    height: 35px;
+    position: relative;
+    .transition(200ms, 'all', linear);
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .search-field-container {
+      .search-field {
+        background-color: transparent;
+        border: none;
+        outline: none!important;
+        .transition(300ms, 'all', linear);
+        .box-shadow(none)!important;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 120px;
+        padding: 8px 10px;
+      }
+      a {
+        display: none;
+      }
+    }
+    .search-container {
+      .transition(200ms, 'all', linear);
+      display: none;
+      margin: 230px 50px 20px;
+
+      ul {
+        padding-top: 0px;
+        list-style: none;
+        padding-left: 0px;
+
+        li {
+          background-color: darken(@body-bg, 5%);
+          margin-bottom: 5px;
+          .border-radius(2px);
+
+          a {
+            display: block;
+            padding: 15px;
+          }
+          .img-container {
+            float: left;
+            margin-right: 15px;
+            height: 40px;
+            width: 40px;
+            .border-radius(50px);
+            overflow: hidden;
+
+            img {
+              min-width: 40px;
+              max-width: 40px;
+              min-height: 40px;
+            }
+          }
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .search-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      line-height: 30px;
+      padding: 10px;
+      display: none;
+    }
+
+    &.open-search {
+      z-index: 9999;
+
+      .search-close {
+      }
+      .search-field-container {
+        position: absolute;
+        top: 90px;
+        left: 80px;
+        right: 80px;
+        height: 150px;
+        margin-bottom: 30px;
+
+        .search-field {
+          font-size: 90px;
+          font-weight: bold;
+          color: @color-danger;
+          top: 0px;
+          left: 0px;
+          padding-right: 130px;
+          position: absolute;
+          width: 100%;
+        }
+        a {
+          display: block;
+          float: right;
+          margin-top: 33px;
+          margin-right: 25px;
+  
+          i {
+            font-size: 80px;
+            color: @color-danger;
+          }
+        }
+      }
+      .search-container {
+      }
+      
+    }
+  }
+
+  li > a, .navbar-toggle  {
+    .transition(100ms, linear);
+    color: #828181;
+  
+  }
+
+  .dropdown-menu {
+
+    .transition(200ms, linear, opacity);
+    opacity:0;
+    display: block; 
+    margin-top: -20px!important;
+    visibility: hidden;
+    height:1px;
+    overflow: hidden;
+
+    li a {
+      color:#484848;
+    }
+
+    li > a {
+      padding-left:30px;
+
+    }
+
+  }
+
+
+}
+
+.menu-right .navbar-top {
+  left: 0px;
+  right: 250px;
+}
+
+.open > .dropdown-menu {
+  opacity:1;
+  margin-top: 0px!important;
+  visibility: visible;
+  z-index: 9999;
+  height: inherit
+}
+  
+.navbar-top li > a:active,
+.navbar-top li > a:focus,
+.navbar-top .open > a:active {
+  background-color: @nav-bg;
+  color: @p-color;
+}
+.navbar-top li > a:hover, 
+.navbar-top .open, 
+.navbar-top .open > a, 
+.navbar-top .open > a:hover {
+   background-color:@color-primary;
+   color: @widget-text-color;
+}
+.navbar-top .nav a > .badge {
+  position: absolute;
+  font-size: 9px;
+  padding: 3px;
+  margin-top: -7px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: @color-primary;
+  margin-left: -4px;
+}
+.navbar-top .nav a > .badge.badge-success {
+  background-color: @color-success;
+}
+.navbar-top .nav a > .badge.badge-info {
+  background-color: @color-info;
+}
+.navbar-top .nav a > .badge.badge-warning {
+  background-color: @color-warning;
+}
+.navbar-top .nav a > .badge.badge-danger {
+  background-color: @color-danger;
+}
+
+.language-nav {
+
+  img {
+    max-height: 12px;
+    width: auto;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+
+  ul {
+
+    img {
+      margin-top: 3px;
+      margin-right: 10px!important;
+    }
+
+  }
+
+}
+
+.user-profile {
+
+  a {
+
+    .user-img-container {
+      .border-radius(40px);
+      display: inline-block;
+      margin-right: 10px;
+      overflow: hidden;
+      float: left;
+      margin-top: -6px;
+
+      img {
+        height: 30px;
+        max-width: 30px;
+      }
+    }
+  }
+
+  .chat-status {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    .border-radius(20px);
+    background-color: @color-primary;
+    margin-left: 5px;
+
+    &.success { background-color: @color-success; }
+    &.info { background-color: @color-info; }
+    &.warning { background-color: @color-warning; }
+    &.danger { background-color: @color-danger; }
+  }
+}
+
+.navbar-top .dropdown-menu {
+  padding: 0px;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+}
+.navbar-top .navbar-right {
+  margin-right: 0px;
+}
+.navbar-top .navbar-right .dropdown-menu:before {
+  right: 15px;
+}
+.navbar-top .dropdown-menu li > a {
+  padding: 7px 10px;
+}
+.navbar-top .dropdown-menu li > a > img {
+  margin-right: 5px;
+}
+
+.show-hide-sidebar {
+  width: 50px;
+  text-align: center;
+}
+.show-hide-sidebar:hover {
+  background-color: @color-primary;
+  color: @widget-text-color;
+}
+
+.collapsed-alertbar .btn-show-chat {
+  background-color: @color-primary!important;
+  color: @widget-text-color!important;
+}
+
+@media (max-width: 767px) {
+  .navbar-top .navbar-right {
+    margin-right: inherit;
+  }
+  .btn-show-chat,
+  .navbar-search-block {
+    display: none!important;
+  }
+  .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+    padding: 5px 15px 5px 15px;
+  }
+}

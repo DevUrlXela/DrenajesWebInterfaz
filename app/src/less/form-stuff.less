@@ -1,0 +1,918 @@
+/*---------------------------------------------------
+    SPINNER
+  ---------------------------------------------------
+    https://github.com/istvan-ujjmeszaros/bootstrap-touchspin
+  ---------------------------------------------------*/
+
+.bootstrap-touchspin .input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  margin-left: -1px;
+  position: relative;
+  margin-bottom: 0px!important;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: 0;
+  border-top-right-radius: 4px;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  margin-top: -2px;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical i {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-size: 9px;
+  font-weight: normal;
+}
+
+/*---------------------------------------------------
+    SLIDER
+  ---------------------------------------------------
+    https://github.com/IonDen/ion.rangeSlider/
+  ---------------------------------------------------*/
+.irs {
+    position: relative; display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+    .irs-line {
+        position: relative; display: block;
+        overflow: hidden;
+        outline: none !important;
+    }
+        .irs-line-left, .irs-line-mid, .irs-line-right {
+            position: absolute; display: block;
+            top: 0;
+        }
+        .irs-line-left {
+            left: 0; width: 11%;
+        }
+        .irs-line-mid {
+            left: 9%; width: 82%;
+        }
+        .irs-line-right {
+            right: 0; width: 11%;
+        }
+
+    .irs-bar {
+        position: absolute; display: block;
+        left: 0; width: 0;
+    }
+        .irs-bar-edge {
+            position: absolute; display: block;
+            top: 0; left: 0;
+        }
+
+    .irs-shadow {
+        position: absolute; display: none;
+        left: 0; width: 0;
+    }
+
+    .irs-slider {
+        position: absolute; display: block;
+        cursor: default;
+        z-index: 1;
+    }
+        .irs-slider.single {
+          background: darken(@color-primary, 10%);
+          .border-radius(10px);
+        }
+        .irs-slider.from {
+          background: darken(@color-primary, 10%);
+          .border-radius(10px);
+        }
+        .irs-slider.to {
+          background: darken(@color-primary, 10%);
+          .border-radius(10px);
+        }
+        .irs-slider.type_last {
+            z-index: 2;
+        }
+
+    .irs-min {
+        position: absolute; display: block;
+        left: 0;
+        cursor: default;
+    }
+    .irs-max {
+        position: absolute; display: block;
+        right: 0;
+        cursor: default;
+    }
+
+    .irs-from, .irs-to, .irs-single {
+        position: absolute; display: block;
+        top: 0; left: 0;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+.irs-grid {
+    position: absolute; display: none;
+    bottom: 0; left: 0;
+    width: 100%; height: 20px;
+}
+.irs-with-grid .irs-grid {
+    display: block;
+}
+    .irs-grid-pol {
+        position: absolute;
+        top: 0; left: 0;
+        width: 1px; height: 8px;
+        background: #000;
+    }
+    .irs-grid-pol.small {
+        height: 4px;
+    }
+    .irs-grid-text {
+        position: absolute;
+        bottom: 0; left: 0;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 9px; line-height: 9px;
+        padding: 0 3px;
+        color: #000;
+    }
+
+.irs-disable-mask {
+    position: absolute; display: block;
+    top: 0; left: -1%;
+    width: 102%; height: 100%;
+    cursor: default;
+    background: rgba(0,0,0,0.0);
+    z-index: 2;
+}
+.lt-ie9 .irs-disable-mask {
+    background: #000;
+    filter: alpha(opacity=0);
+    cursor: not-allowed;
+}
+
+.irs-disabled {
+    opacity: 0.4;
+}
+
+
+.irs-hidden-input {
+    position: absolute !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+    z-index: -9999 !important;
+    background: none !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+}
+
+.irs-line-mid,
+.irs-line-left,
+.irs-line-right,
+.irs-bar,
+.irs-bar-edge,
+.irs-slider {
+}
+
+.irs {
+    height: 40px;
+}
+.irs-with-grid {
+    height: 60px;
+}
+.irs-line {
+    height: 12px; top: 25px;
+}
+    .irs-line-left {
+        height: 12px;
+        background-position: 0 -30px;
+        background: lighten(@color-primary, 30%);
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .irs-line-mid {
+        height: 12px;
+        background-position: 0 0;
+        background: lighten(@color-primary, 30%);
+    }
+    .irs-line-right {
+        height: 12px;
+        background-position: 100% -30px;
+        background: lighten(@color-primary, 30%);
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        -moz-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+.irs-bar {
+    height: 12px; top: 25px;
+    background-position: 0 -60px;
+    background: @color-primary;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+    .irs-bar-edge {
+        top: 25px;
+        height: 12px; width: 9px;
+        background-position: 0 -90px;
+
+        background: @color-primary;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+.irs-shadow {
+    height: 3px; top: 34px;
+    background: #000;
+    opacity: 0.25;
+}
+.lt-ie9 .irs-shadow {
+    filter: alpha(opacity=25);
+}
+
+.irs-slider {
+    width: 16px; height: 18px;
+    top: 22px;
+    background-position: 0 -120px;
+}
+.irs-slider.state_hover, .irs-slider:hover {
+    background-position: 0 -150px;
+}
+
+.irs-min, .irs-max {
+    color: #999;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    top: 0; padding: 1px 3px;
+    background: #e1e4e9;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: #fff;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background: @color-danger;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.irs-from:after, .irs-to:after, .irs-single:after {
+    position: absolute; display: block; content: "";
+    bottom: -6px; left: 50%;
+    width: 0; height: 0;
+    margin-left: -3px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-top-color: @color-danger;
+}
+
+
+.irs-grid-pol {
+    background: #e1e4e9;
+}
+.irs-grid-text {
+    color: #999;
+}
+
+.irs-disabled {
+}
+
+
+
+
+
+
+/*---------------------------------------------------
+    SELECTATOR
+  ---------------------------------------------------
+  ---------------------------------------------------*/
+
+/* reset */
+.multipleselect {
+  min-height: 50px;
+  height: 50px;
+}
+.selectator * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  text-decoration: none;
+}
+.selectator img {
+  display: block;
+}
+
+/* dimmer */
+#selectator_dimmer {
+  background-color: rgba(0,0,0,.1);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* Main box */
+.selectator {
+  border: 1px solid @form-border;
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: none;
+  height: 50px!important;
+  min-height: 50px!important;
+}
+.selectator.multiple {
+  padding-right: 20px !important;
+  padding-bottom: 5px !important;
+}
+.selectator.single {
+  height: 36px;
+  padding: 7px 10px !important;
+}
+.selectator:after {
+  position: absolute;
+  cursor: pointer;
+  content: '\25BC';
+  font-size: 90%;
+  right: 4px;
+  color: #aaa;
+  top: 50%;
+  line-height: 0;
+}
+
+/* chosen items holder */
+        .selectator_chosen_items {
+  display: inline;
+}
+.single .selectator_chosen_items {
+  display: block;
+}
+
+/* chosen item */
+.selectator_chosen_item {
+  display: inline-block;
+  background-color: @color-primary;
+  border-radius: 2px;
+  color: @widget-text-color;
+  padding: 4px 20px 4px 4px;
+  font-size: 13px;
+  margin: 2px;
+  position: relative;
+  vertical-align: top;
+}
+.single   .selectator_chosen_item {
+  background-color: transparent;
+  color: #000;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+.multiple .selectator_chosen_item {
+  margin: 5px 0 0 5px;
+  padding: 3px 5px 2px 5px;
+}
+/* chosen item - left */
+          .selectator_chosen_item_left {
+  float: left;
+  width: 25px;
+}
+          .selectator_chosen_item_left img {
+  height: 23px;
+}
+.multiple .selectator_chosen_item_left {
+  float: left;
+  width: 22px;
+}
+.multiple .selectator_chosen_item_left img {
+  height: 18px;
+  .border-radius(40px);
+}
+/* chosen item - title */
+          .selectator_chosen_item_title {
+  
+}
+.single   .selectator_chosen_item_title {
+  height: auto;
+}
+.multiple .selectator_chosen_item_title {
+  float: left;
+  padding-top: 2px;
+}
+/* chosen item - subtitle */
+.selectator_chosen_item_subtitle {
+  display: none;
+}
+/* chosen item - right */
+.selectator_chosen_item_right {
+  float: right;
+  width: 20px;
+  background-color: #ccc;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 20px;
+}
+.multiple .selectator_chosen_item_right {
+  display: none;
+}
+
+/* chosen item remove button */
+.selectator_chosen_item_remove {
+  display: inline-block;
+  font-weight: bold;
+  color: @color-primary;
+  margin: 0 0 0 5px;
+  padding: 6px 5px 4px 5px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 10px;
+  vertical-align: top;
+  border-radius: 0 2px 2px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+}
+.selectator_chosen_item_remove:after {
+  position: absolute;
+  content: "\e646";
+  color: @widget-text-color;
+  font-family: 'themify';
+  font-size: 10px;
+  right: 0px;
+  top: 6px;
+}
+.selectator_chosen_item_remove:hover {
+  color: @color-primary;
+  background-color: @color-primary;
+}
+.single   .selectator_chosen_item_remove {
+  display: none;
+}
+.multiple .selectator_chosen_item_remove {
+  padding: 7px 5px 4px 5px;
+}
+.multiple .selectator_chosen_item_remove:hover {
+  
+}
+.multiple .selectator_input,
+.multiple .selectator_textlength {
+  padding: 1px 0 0 0;
+  margin: 7px 0 2px 5px;
+}
+
+
+
+
+/* input box */
+                        .selectator_input,
+                        .selectator_textlength {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  background-color: transparent;
+  font-size: 13px;
+  outline: none;
+  padding: 6px 0 0 0;
+}
+.single                 .selectator_input {
+  border: 1px solid #7f9db9;
+  position: absolute;
+  bottom: -40px;
+  left: -1px;
+  z-index: 101;
+  padding: 10px 25px;
+  width: 100%;
+  width: calc(100% + 2px);
+  border-bottom: 0;
+  background-color: #f6f6f6;
+  color: #333;
+  font-size: inherit;
+}
+.single.options-hidden  .selectator_input {
+  opacity: 0;
+  position: absolute;
+  left: -10000px;
+}
+.single.options-visible .selectator_input {
+  opacity: 1;
+}
+.disable_search         .selectator_input {
+  opacity: 0;
+  padding: 0 1px 1px 0 !important;
+}
+
+/* options holder */
+.selectator_options {
+  margin: 0;
+  padding: 0;
+  border: 1px solid @p-color;
+  border-radius: 0 0 3px 3px;
+  font-family: sans-serif;
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  z-index: 101;
+  background-color: #fff;
+  overflow-y: scroll;
+  max-height: 250px;
+  list-style: none;
+  left: -1px;
+  right: -1px;
+}
+.single .selectator_options {
+  padding-top: 0;
+  border-top: 0;
+}
+.disable_search .selectator_options {
+  border-top: 1px solid #7f9db9;
+}
+.single.disable_search     .selectator_options {
+  padding-top: 0;
+}
+.selectator.options-hidden .selectator_options {
+  display: none;
+}
+
+/* option item group header */
+.selectator_group_header {
+  padding: 5px;
+  font-weight: bold;
+}
+
+/* option item group holder */
+.selectator_group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* option item */
+                  .selectator_option {
+  padding: 5px;
+  cursor: pointer;
+  color: #000;
+}
+.selectator_option.active {
+  background-color: @color-primary;
+  color: @widget-text-color;
+
+  .selectator_option_subtitle {
+    color: @widget-text-color;
+  }
+
+}
+.selectator_group .selectator_option {
+  padding: 5px 5px 5px 20px;
+}
+/* option item - left */
+.selectator_option_left {
+  float: left;
+  .border-radius(50px);
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+}
+.selectator_option_left img {
+  min-width: 35px;
+  min-height: 35px;
+  max-height: 40px;
+  width: auto;
+}
+/* option item - title */
+.selectator_option_title {
+  margin-left: 35px;
+}
+/* option item - subtitle */
+.selectator_option_subtitle {
+  font-size: 75%;
+  color: #888;
+  margin-left: 35px;
+}
+/* option item - right */
+.selectator_option_right {
+  float: right;
+  width: 30px;
+  background-color: #ccc;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px;
+}
+
+
+
+input.msuggest-input-dropdown {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAFCAQAAADiFHT/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAANElEQVR42mJk+M+ABv4zooswoQthKmFgYEIVxqaEgYEJWQq7EqgiiDQuJQwMAAAAAP//AwD8wwoJyWPgpgAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 23px;
+}
+
+.msuggest-loading {
+    height: 60px;
+    background-image: url(data:image/gif;base64,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);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+input.msuggest-selected {
+    text-decoration: underline;
+}
+
+.msuggest-header,
+.msuggest-link a,
+.msuggest-ellip span {
+    color: #666;
+    padding:5px 20px;
+}
+
+.msuggest-header {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.msuggest-link {
+    padding-bottom:10px;
+}
+
+.msuggest-link a {
+    text-decoration: underline;
+}
+
+.input-append .disabled.active,
+.input-prepend .disabled.active,
+.input-append .msuggest-header.active,
+.input-prepend .msuggest-header.active {
+    background-color: #FFFFFF;
+    border-color: inherit;
+    background: none;
+}
+
+.dropdown-menu > li.disabled > a:hover,
+.dropdown-menu > li.disabled > a:focus,
+.dropdown-menu > .disabled.active > a,
+.dropdown-menu > .disabled.active > a:hover,
+.dropdown-menu > .disabled.active > a:focus {
+    background-color: #ffffff;
+    background: none;
+}
+
+.msuggest-menu img {
+    margin-right: 3px;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+/*---------------------------------------------------
+    LABELAUTY
+  ---------------------------------------------------
+    https://github.com/fntneves/jquery-labelauty
+  ---------------------------------------------------*/
+
+/* Prevent text and blocks selection */
+input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
+input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+
+/* Hide original checkboxes. They are ugly! */
+input.labelauty { display: none !important; }
+
+/*
+ * Let's style the input
+ * Feel free to work with it as you wish!
+ */
+input.labelauty + label
+{
+  display: inline-block;
+  font-size: 11px;
+  padding: 6px;
+  background-color: @btn-bg;
+  color: #b3b3b3;
+  cursor: pointer;
+
+  .border-radius(3px);
+  .transition(250ms, linear, background-color);
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+
+  height: 28px;
+  width: 28px;
+
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+input.labelauty.tiny + label {
+  height: 20px;
+  width: 20px;
+  padding: 2px 4px;
+}
+.form-inline .checkbox input.labelauty + label, .form-inline .radio input.labelauty + label {
+  padding:6px!important;
+}
+
+input.labelauty[type=radio] + label {
+  .border-radius(15px);
+}
+
+/* Stylish text inside label */
+
+input.labelauty + label > span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked
+{
+  display: inline-block;
+  line-height: 16px;
+  vertical-align: bottom;
+}
+
+/* Stylish icons inside label */
+
+input.labelauty + label > span.labelauty-unchecked-image,
+input.labelauty + label > span.labelauty-checked-image
+{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-position: left center;
+  .transition(500ms, linear, background-image);
+}
+
+/* When there's a label, add a little margin to the left */
+input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+{
+  margin-left: 7px;
+}
+
+/* When not Checked */
+input.labelauty:not(:checked):not([disabled]) + label:hover
+{
+  background-color: darken(@btn-bg, 5%);
+  color: #a7a7a7;
+}
+input.labelauty:not(:checked) + label > span.labelauty-checked-image
+{
+  display: none;
+}
+
+input.labelauty:not(:checked) + label > span.labelauty-checked
+{
+  display: none;
+}
+
+/* When Checked */
+input.labelauty:checked + label
+{
+  background-color: darken(@btn-bg, 10%);
+  color: #ffffff;
+}
+input.labelauty:checked:not([disabled]) + label:hover
+{
+  background-color: darken(@btn-bg, 5%);
+}
+
+input.labelauty.checkbox-primary:checked + label {
+  background-color: @color-primary;
+  color: @widget-text-color;
+}
+input.labelauty.checkbox-primary:checked:not([disabled]) + label:hover {
+  background-color: darken(@color-primary, 10%);
+}
+input.labelauty.checkbox-success:checked + label {
+  background-color: @color-success;
+  color: @widget-text-color;
+}
+input.labelauty.checkbox-success:checked:not([disabled]) + label:hover {
+  background-color: darken(@color-success, 10%);
+}
+input.labelauty.checkbox-info:checked + label {
+  background-color: @color-info;
+  color: @widget-text-color;
+}
+input.labelauty.checkbox-info:checked:not([disabled]) + label:hover {
+  background-color: darken(@color-info, 10%);
+}
+input.labelauty.checkbox-warning:checked + label {
+  background-color: @color-warning;
+  color: @widget-text-color;
+}
+input.labelauty.checkbox-warning:checked:not([disabled]) + label:hover {
+  background-color: darken(@color-warning, 10%);
+}
+input.labelauty.checkbox-danger:checked + label {
+  background-color: @color-danger;
+  color: @widget-text-color;
+}
+input.labelauty.checkbox-danger:checked:not([disabled]) + label:hover {
+  background-color: darken(@color-danger, 10%);
+}
+
+
+input.labelauty:checked + label > span.labelauty-unchecked-image
+{
+  display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-unchecked
+{
+  display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-checked
+{
+  display: inline-block;
+}
+
+input.labelauty.no-label:checked + label > span.labelauty-checked
+{
+  display: block;
+}
+
+/* When Disabled */
+input.labelauty[disabled] + label
+{
+  opacity: 0.5;
+}
+
+/* Add a background to (un)checked images */
+input.labelauty + label > span.labelauty-unchecked-image
+{
+  .bg-image('input-unchecked.png');
+}
+
+input.labelauty + label > span.labelauty-checked-image
+{
+  .bg-image('input-checked.png');
+}
+input.labelauty.tiny + label > span.labelauty-unchecked-image
+{
+  .bg-image('input-unchecked-tiny.png');
+}
+
+input.labelauty.tiny + label > span.labelauty-checked-image
+{
+  .bg-image('input-checked-tiny.png');
+}
+
+.wysiwyg-textarea {
+  width: 100%;
+  height: 300px;
+  border: solid 1px @form-border;
+  .box-shadow(none);
+}
+@import "../css/wysiwyg.css";

@@ -1,0 +1,116 @@
+/*---------------------------------------------------
+    ALERT / CHAT MULTI PANEL
+  ---------------------------------------------------
+    Right panel where all the alerts are shown
+  ---------------------------------------------------*/
+#multi-panel {
+  position: fixed;
+  right: -310px;
+  width: 290px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #fff;
+  z-index: 999;
+
+  #multi-panel-tabs {
+    height: 50px;
+  }
+  .container-fluid {
+    padding: 50px 0px 0px;
+  }
+
+  .nav-tabs {
+    background-color: @body-bg;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    display: block;
+
+    >li {
+      margin: 0px;
+      padding: 0px;
+      margin-left: -1px;
+      text-transform: uppercase;
+
+      a {
+        .border-radius(0px);
+        margin: 0px;
+        border: 0px;
+        height: 50px;
+        padding-top: 15px;
+      }
+      a:hover {
+        background-color: @color-primary;
+      }
+
+    }
+  }
+  .tab-pane {
+    padding: 0px!important;
+  }
+  .panel-body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .widget-title {
+    padding: 0px 15px;
+  }
+  .widget {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+   
+    &.list-group, .list-group {
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+
+      .list-group-item, li {
+        border-left: 0px;
+        border-right: 0px;
+      }
+      a.list-group-item {
+        border-top: 0px;
+      }
+    }
+    .chat-status {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      .border-radius(20px);
+      background-color: @color-primary;
+      margin-right: 8px;
+
+      &.success { background-color: @color-success; }
+      &.info { background-color: @color-info; }
+      &.warning { background-color: @color-warning; }
+      &.danger { background-color: @color-danger; }
+    }
+    &.chat-widget {
+      li {
+        padding: 0px;
+
+        a {
+          padding: 10px 15px;
+          display: block;
+
+          .label {
+            margin-left: 10px;
+          }
+        }
+      } 
+    }
+  }
+}
+.collapsed-alertbar {
+  #multi-panel {
+    right: 0px;
+    z-index: 999;
+  }
+  #playground {
+    right: 290px;
+
+    .navbar-top {
+      right: 290px;
+    }
+  }
+}

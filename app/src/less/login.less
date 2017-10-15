@@ -1,0 +1,252 @@
+/*---------------------------------------------------
+    LOGIN
+  ---------------------------------------------------
+    login page styles
+  ---------------------------------------------------*/
+html, body {
+}
+
+.login-page {
+  background-color: @body-bg;
+  color: @p-color;
+
+  &.lock-screen {
+    .animsition {
+      background-color: @sidebar-bg;
+    }
+
+    .panel {
+      position: relative;
+      .border-radius(3px);
+      padding-top: 40px;
+
+      .img-container {
+        position: absolute;
+        .border-radius(200px);
+        display: block;
+        height: 150px;
+        width: 150px;
+        background: #fff;
+        border: solid 5px #fff;
+        overflow: hidden;
+        margin: auto auto;
+        margin-top: -160px;
+        margin-left: 60px;
+
+        img {
+          max-width: 140px;
+          height: auto;
+
+        }
+      }
+    }
+  }
+
+  .animsition {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    display: table;
+    text-align: center;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .register-now {
+    text-align: center;
+    font-size: 12px;
+
+    a {
+      display: inline-block;
+      border-bottom: dotted 1px #ccc;
+      text-decoration: none!important;
+
+      &:active, &:visited, &:focus {
+        text-decoration: none!important;
+      }
+        
+    }
+  }
+
+  .go-back {
+    text-align: left;
+    font-size: 12px;
+    padding-top: 10px;
+
+    a {
+      text-decoration: none;
+
+      &:active, &:visited, &:focus {
+        text-decoration: none!important;
+      }
+    }
+  }
+
+  .login-container {
+    display: table-cell;
+    vertical-align: middle;
+
+    .panel-container {
+      padding: 30px 0px;
+    }
+
+    .panel {
+      width: 300px;
+      margin: auto auto;
+      text-align: left;
+
+      .btn-login {
+
+        .ti-unlock {
+          display: none;
+        }
+        .ti-lock {
+          display: inline-block;
+        }
+
+        &:hover {
+          .ti-unlock {
+            display: inline-block;
+          }
+          .ti-lock {
+            display: none;
+          }
+        }
+      }
+
+      .panel-heading {
+        background-color: @sidebar-bg;
+        color: @widget-text-color;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 0px;
+
+        p {
+          padding: 0px;
+          margin: 0px;
+        }
+
+        img {
+          max-width: 170px;
+        }
+      }
+
+      .social-login {
+
+        a {
+          display: inline-block;
+          height: 32px;
+          width: 32px;
+          .border-radius(50px);
+          color: @widget-text-color;
+          background-color: @color-danger;
+          font-size: 14px;
+          padding-top: 7px;
+          text-align: center;
+
+          &:active, &:focus {
+            text-decoration: none!important;
+          }
+
+          &:hover {
+            background-color: darken(@color-danger, 10%);
+          }
+
+        }
+      }
+
+      .forgot-link {
+        display: inline-block;
+        border-bottom: dotted 1px #ccc;
+
+        a {
+          text-decoration: none!important;
+
+          &:active, &:visited, &:focus {
+            text-decoration: none!important;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .recover-container {
+    display: table-cell;
+    vertical-align: middle;
+
+    .panel-container {
+      width: 300px;
+      margin: auto auto;
+      padding: 30px 0px;
+    }
+    .panel {
+      width: 300px;
+      margin: auto auto;
+      text-align: left;
+
+      .panel-heading {
+        background-color: @sidebar-bg;
+        color: @widget-text-color;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 0px;
+
+        p {
+          padding: 0px;
+          margin: 0px;
+        }
+
+        img {
+          max-width: 170px;
+        }
+      }
+
+    }
+  }
+
+  .register-container {
+    display: table-cell;
+    vertical-align: middle;
+
+    .panel-container {
+      width: 300px;
+      margin: auto auto;
+      padding: 30px 0px;
+    }
+
+    .panel {
+      width: 300px;
+      margin: auto auto;
+      text-align: left;
+
+      .panel-heading {
+        background-color: @sidebar-bg;
+        color: @widget-text-color;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 0px;
+
+        p {
+          padding: 0px;
+          margin: 0px;
+        }
+
+        img {
+          max-width: 170px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

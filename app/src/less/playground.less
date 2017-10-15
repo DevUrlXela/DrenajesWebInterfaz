@@ -1,0 +1,43 @@
+/*---------------------------------------------------
+    PLAYGROUND
+  ---------------------------------------------------
+    main are where widgets and panels are shown
+  ---------------------------------------------------*/
+
+#playground {
+  display: block;
+  overflow: auto;
+  position: absolute;
+  left: 250px;
+  right: 0px;
+  min-height: 100%;
+  background: @body-bg;
+  padding-top: 75px;
+  padding-bottom: 62px;
+
+  #page-title {
+    padding: 15px 15px 30px;
+    overflow: auto;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+  }
+  .no-padding-left {
+    padding-left: 0px;
+  }
+
+  .white-bg {
+    background: #fff;
+    padding: 30px 15px;
+  }
+
+}
+
+.menu-right #playground {
+  left: 0px;
+  right: 250px;
+}

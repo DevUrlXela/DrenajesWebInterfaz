@@ -1,0 +1,64 @@
+/*---------------------------------------------------
+    RESPONSIVENESS
+  ---------------------------------------------------
+    adjust the contents on smaller devices
+  ---------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+   
+  .fix-on-scroll {
+    margin-top: 0px!important;
+  }
+
+  #playground {
+    left: 50px;
+    z-index: 9;
+
+     .navbar-top {
+      left: 50px;
+     }
+  }
+
+  .menu-right #playground {
+    left: 0px;
+    right: 50px;
+  }
+
+  .menu-right .navbar-top {
+    left: 0px!important;
+    right: 50px;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    background-color: @nav-bg;
+    .box-shadow(0 6px 12px rgba(0,0,0,.175));
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    background-color: @body-bg;
+  }
+  .navbar-top .dropdown-menu {
+    .transition(none)!important;
+  }
+  .navbar-nav .open .dropdown-menu>li>a {
+    .transition(none)!important;
+  }
+
+  .navbar-toggle {
+    margin-right: 0px;
+
+    .icon-bar {
+      background-color: @p-color;
+    }
+  }
+
+}
