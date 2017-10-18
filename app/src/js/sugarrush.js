@@ -44,7 +44,7 @@ jQuery(document).ready(function() {
             loadingParentElement  :   'body', //animsition wrapper element
             loadingClass          :   'animsition-loading',
             unSupportCss          : [ 'animsition', '-webkit-animation-duration', '-o-animation-duration'],
-            overlay               :   false,      
+            overlay               :   false,
             overlayClass          :   'animsition-overlay-slide',
             overlayParentElement  :   'body'
         });
@@ -79,7 +79,7 @@ jQuery(document).ready(function() {
     //////////////////////////
     // PANEL ANIMATION ///////
     //////////////////////////
-    
+
     jQuery('div[class|="col"]').each(function() {
         var _t = jQuery(this);
 
@@ -92,7 +92,7 @@ jQuery(document).ready(function() {
         _t.attr('data-opacity', '0');
         _t.attr('data-scale', '0.5');
     });
-    
+
 
     ////////////////////////////
     // PANEL SAME HEIGHT ///////
@@ -165,7 +165,7 @@ jQuery(document).ready(function() {
             _a.click();
         }
 	});
-    
+
     ////////////////////////
     // FIX ON SCROLL ///////
     ////////////////////////
@@ -176,7 +176,7 @@ jQuery(document).ready(function() {
             var _treshhold = _t.offset().top-80;
 
             jQuery(window).scroll(function () {
-                        
+
                 if (jQuery(window).scrollTop() > _treshhold) {
                     var _dif = jQuery(window).scrollTop() - _treshhold;
                     _t.css('margin-top', _dif);
@@ -195,7 +195,7 @@ jQuery(document).ready(function() {
     var _treshhold_goto = (jQuery(window).height()/2);
 
     jQuery(window).scroll(function () {
-                
+
         if (jQuery(window).scrollTop() > _treshhold_goto) {
             jQuery('.scroll-top').fadeIn();
         }
@@ -204,7 +204,7 @@ jQuery(document).ready(function() {
         }
 
     });
-    
+
 
     ////////////////////////////////
     // TOOLTIPS AND POPOVERS ///////
@@ -214,7 +214,7 @@ jQuery(document).ready(function() {
 
 
     // ScrollTOP
-    jQuery('.scroll-top').click(function() {
+    jQuery(document).on('click','.scroll-top',function() {
         jQuery(document).scrollTo(0, 300);
     });
 

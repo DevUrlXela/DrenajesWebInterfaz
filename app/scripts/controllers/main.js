@@ -1,12 +1,10 @@
 'use strict';
 
 angular.module('drenajesWebInterfazApp')
-  .controller('MainCtrl', function ($scope, $cookies, apiService) {
-    if($cookies.get("a") != null){
-      $cookies.put("a", "1" + $cookies.get("a") )
+  .controller('MainCtrl', function ($scope, $cookies, $location, apiService, sesion) {
+    if(sesion.isLoged() == false){
+      $location.url('/login');
     }
-    else{
-      $cookies.put("a", "1")
-    }
-      console.log($cookies.get("a"))
-});
+    
+    //apiService.crear('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDMWY9z1PPeX-6adeIMRZBwk87ilFeH3bw',{"email" : "alguien@gmail.com","password" : "12345678","returnSecureToken": true});
+})

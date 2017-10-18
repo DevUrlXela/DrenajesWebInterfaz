@@ -1,0 +1,57 @@
+<!-- - - - - - - - - - - - - -->
+<!-- start of TOP NAVIGATION -->
+<!-- - - - - - - - - - - - - -->
+<nav class="navbar navbar-top navbar-static-top">
+  <div class="container-fluid">
+
+    <!-- sidebar collapse and toggle buttons get grouped for better mobile display -->
+    <div class="navbar-header nav">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand show-hide-sidebar hide-sidebar" href=""><i class="fa fa-outdent"></i></a>
+      <a class="navbar-brand show-hide-sidebar show-sidebar" href=""><i class="fa fa-indent"></i></a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-top">
+
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="" class="btn-show">
+            <i class="ti-email"></i><span class="badge badge-warning">10</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- start of USER MENU -->
+        <li class="dropdown user-profile">
+          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <div class="user-img-container">
+              <img src="" alt="">
+            </div>
+            {{nombre_usuario}} <span class="chat-status success"></span>
+          </a>
+
+          <ul class="dropdown-menu" role="menu">
+            <li><a ng-click="cerrar()">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        <!-- end of USER MENU -->
+
+      </ul>
+    </div>
+    <!-- end of navbar-collapse -->
+  </div>
+  <!-- end of container-fluid -->
+</nav>
+
+<!-- - - - - - - - - - - - - -->
+<!-- end of TOP NAVIGATION   -->
+<!-- - - - - - - - - - - - - -->

@@ -23,8 +23,11 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'Main'
+        controller: 'MainCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -54,4 +57,54 @@ angular
       modificar: modificar,
       borrar: borrar
     };
+  })
+  .service('sesion', function($cookies, apiService){
+
+    var getToken = function(){
+      return $cookies.getObject('sesion').token
+    }
+
+    var getCookie = function(){
+      return $cookies.getObject('sesion')
+    }
+
+    var isLoged = function(){
+      if( $cookies.getObject('sesion') != null){
+        return true
+      }
+      else {
+        return false
+      }
+    }
+
+    var login = function(token,idUser,user){
+
+        $cookies.putObject('sesion', {'token': token ,'idUser': idUser, 'user': user})
+    }
+
+
+    var logout = function(){
+      $cookies.remove('sesion')
+    }
+
+    return{
+      login : login,
+      logout : logout,
+      isLoged : isLoged,
+      getToken: getToken,
+      getCookie : getCookie
+    }
+  })
+  .component('cmFooter', {
+    templateUrl: 'views/componentes/footer.html'
+  })
+  .component('cmSidebar', {
+    templateUrl: 'views/componentes/sidebar.html'
+  })
+  .component('cmScrolltop',  {
+    templateUrl: 'views/componentes/scrolltop.html'
+  })
+  .component('cmTopnavigation',  {
+    templateUrl: 'views/componentes/topnavigation.html',
+    controller: 'TopCtrl'
   });

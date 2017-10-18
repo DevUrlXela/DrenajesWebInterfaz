@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="/src/img/favicon.ico">
-    <title>SugarRush - Admin template</title>
+    <title>Drenajes Xela</title>
 
     <!-- Bootstrap -->
     <link href="/src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,159 +21,11 @@
 
   </head>
   <body class="">
+
     <div class="animsition">
 
-      <!-- start of LOGO CONTAINER -->
-      <div id="logo-container">
-        <a href="#" id="logo-img">
-          <img src="/src/img/logo.png" class="big-logo" alt="SugarCrush">
-          <img src="/src/img/logo-mobile.png" data-no-retina  class="small-logo" alt="SugarCrush">
-        </a>
-      </div>
-      <!-- end of LOGO CONTAINER -->
+        <ng-view></ng-view>
 
-      <!-- - - - - - - - - - - - - -->
-      <!-- start of SIDEBAR        -->
-      <!-- - - - - - - - - - - - - -->
-      <div id="sidebar">
-        <div class="sidebar_scroll"> <!-- start of slimScroll -->
-
-
-
-          <ul class="nav lg-menu" id="main-nav">
-            <li class="sidebar-title">
-              <h5 class="text-center margin-bottom-30 margin-top-15">MENU</h5>
-            </li>
-
-            <li><a href="#"> <i class="ti-email"></i> <span>Expediente</span> <i class="pull-right has-submenu ti-angle-right"></i></a>
-              <ul class="nav nav-submenu submenu-hidden">
-                <li><a href="#" >Bandeja de entrada</a></li>
-                <li><a href="#" >Transferidos</a></li>
-                <li><a href="#" >Finalizados</a></li>
-              </ul>
-            </li>
-
-            <li><a href="#"> <i class="ti-layout-grid3-alt"></i> <span>Tareas con expedientes</span> <i class="pull-right has-submenu ti-angle-right"></i></a>
-              <ul class="nav nav-submenu submenu-hidden">
-                <li><a href="#" >Consultar estado</a></li>
-                <li><a href="#">Crear expediente</a></li>
-              </ul>
-            </li>
-
-
-            <li><a href="#"> <i class="ti-layout-grid3-alt"></i> <span>Reportes</span> <i class="pull-right has-submenu"></i></a>
-
-            <li><a href="#"> <i class="ti-user"></i> <span>Usuario</span> <i class="pull-right has-submenu ti-angle-right"></i></a>
-                <ul class="nav nav-submenu submenu-hidden">
-                  <li><a href="#">Dar de baja</a></li>
-                  <li><a href="#">Crear usuario</a></li>
-                  <li><a href="#">Gestionar permisos</a></li>
-                </ul>
-            </li>
-
-
-          </ul>
-
-        </div> <!-- end of slimScroll -->
-      </div>
-      <!-- - - - - - - - - - - - - -->
-      <!-- end of SIDEBAR          -->
-      <!-- - - - - - - - - - - - - -->
-
-
-      <main id="playground">
-
-
-        <!-- - - - - - - - - - - - - -->
-        <!-- start of TOP NAVIGATION -->
-        <!-- - - - - - - - - - - - - -->
-        <nav class="navbar navbar-top navbar-static-top">
-          <div class="container-fluid">
-
-            <!-- sidebar collapse and toggle buttons get grouped for better mobile display -->
-            <div class="navbar-header nav">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand show-hide-sidebar hide-sidebar" href="#"><i class="fa fa-outdent"></i></a>
-              <a class="navbar-brand show-hide-sidebar show-sidebar" href="#"><i class="fa fa-indent"></i></a>
-            </div>
-
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-top">
-
-              <ul class="nav navbar-nav">
-                <li>
-                  <a href="#" class="btn-show">
-                    <i class="ti-email"></i><span class="badge badge-warning">10</span>
-                  </a>
-                </li>
-              </ul>
-
-              <ul class="nav navbar-nav navbar-right">
-
-                <!-- start of USER MENU -->
-                <li class="dropdown user-profile">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <div class="user-img-container">
-                      <img src="../demofiles/demoimage.gif" alt="">
-                    </div>
-                    Usuario <span class="chat-status success"></span>
-                  </a>
-
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Cerrar sesión</a></li>
-                  </ul>
-                </li>
-                <!-- end of USER MENU -->
-
-              </ul>
-            </div>
-            <!-- end of navbar-collapse -->
-          </div>
-          <!-- end of container-fluid -->
-        </nav>
-
-        <!-- - - - - - - - - - - - - -->
-        <!-- end of TOP NAVIGATION   -->
-        <!-- - - - - - - - - - - - - -->
-
-
-        <!-- PAGE TITLE -->
-        <!--section id="page-title" class="row"-->
-
-        <ng-view><ng-view/>
-
-        </section> <!-- / PAGE TITLE -->
-
-        <div class="container-fluid">
-          <div class="row">
-
-            <div class="col-md-12">
-
-            </div> <!-- / col-md-12 -->
-
-          </div> <!-- / row -->
-
-        </div> <!-- / container-fluid -->
-
-
-
-      <footer>
-        <p>Powered by URL</p>
-      </footer>
-
-
-    </main> <!-- /playground -->
-
-
-    <div class="scroll-top">
-      <i class="ti-angle-up"></i>
-    </div>
   </div> <!-- /animsition -->
 
   <!-- jQuery Plantilla (necessary for Bootstrap's JavaScript plugins) -->
@@ -186,7 +38,6 @@
     <script src="/src/js/includes.js"></script>
     <script src="/src/js/sugarrush.js"></script>
     <!-- Fin scripts plantilla -->
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
 
@@ -205,6 +56,10 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/componentes.js"></script>
         <!-- endbuild -->
+
+
 </body>
 </html>

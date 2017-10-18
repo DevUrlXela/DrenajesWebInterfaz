@@ -5,16 +5,16 @@ jQuery(document).ready(function() {
         e.preventDefault();
         swal(
             {
-                title: "Are you sure?",   
-                text: "You will not be able to recover this user!",   
-                type: "warning",   
-                showCancelButton: true,   
-                confirmButtonColor: "#DD6B55",   
-                confirmButtonText: "Yes, delete it!",   
+                title: "Are you sure?",
+                text: "You will not be able to recover this user!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
                 closeOnConfirm: false
-            }, 
-            function() {  
-                swal("Deleted!", "The user has been deleted.", "success"); 
+            },
+            function() {
+                swal("Deleted!", "The user has been deleted.", "success");
             }
         );
     });
@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
         jQuery.notify({
             // options
-            message: 'Hello World' 
+            message: 'Hello World'
         },{
             // settings
             type: 'primary'
@@ -34,10 +34,10 @@ jQuery(document).ready(function() {
 
     jQuery('.alert-demo-2').on('click', function(e){
         e.preventDefault();
-        
+
         jQuery.notify({
             // options
-            message: 'Hello World' 
+            message: 'Hello World'
         },{
             // settings
             type: 'danger'
@@ -46,10 +46,10 @@ jQuery(document).ready(function() {
 
     jQuery('.alert-demo-3').on('click', function(e){
         e.preventDefault();
-        
+
         jQuery.notify({
             // options
-            message: 'Hello World' 
+            message: 'Hello World'
         },{
             // settings
             type: 'info'
@@ -58,10 +58,10 @@ jQuery(document).ready(function() {
 
     jQuery('.alert-demo-4').on('click', function(e){
         e.preventDefault();
-        
+
         jQuery.notify({
             // options
-            message: 'Hello World' 
+            message: 'Hello World'
         },{
             // settings
             type: 'success'
@@ -70,10 +70,10 @@ jQuery(document).ready(function() {
 
     jQuery('.alert-demo-5').on('click', function(e){
         e.preventDefault();
-        
+
         jQuery.notify({
             // options
-            message: 'Hello World' 
+            message: 'Hello World'
         },{
             // settings
             type: 'warning'
@@ -102,24 +102,24 @@ jQuery(document).ready(function() {
 
     jQuery('.alert-demo-10').on('click', function(e) {
         e.preventDefault();
-        swal({   
-            title: "An input!",   
-            text: "Write something interesting:",   
-            type: "input",   
-            showCancelButton: true,   
-            closeOnConfirm: false,   
-            animation: "slide-from-top" 
-        }, 
-            function(inputValue){   
+        swal({
+            title: "An input!",
+            text: "Write something interesting:",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top"
+        },
+            function(inputValue){
                 if (inputValue === false) {
                     return false;
-                }      
-                if (inputValue === "") {     
-                    swal.showInputError("You need to write something!");     
-                    return false;   
-                }      
-                swal("Nice!", "You wrote: " + inputValue, "success");   
-            } 
+                }
+                if (inputValue === "") {
+                    swal.showInputError("You need to write something!");
+                    return false;
+                }
+                swal("Nice!", "You wrote: " + inputValue, "success");
+            }
         );
     });
 

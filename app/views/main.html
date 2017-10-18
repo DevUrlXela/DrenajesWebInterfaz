@@ -1,319 +1,302 @@
-<!--main id="playground">
+
+  <cm-sidebar></cm-sidebar>
+  <main id="playground">
+    <cm-topnavigation></cm-topnavigation>
+
+    <!-- PAGE TITLE -->
+    <section id="page-title" class="row">
+
+      <div class="col-md-8">
+        <h1>Bandeja de Entrada</h1>
+        <p class="lead">Tiene <span class="label label-warning">122</span> mensajes, <span class="label label-danger">8</span> sin leer.</p>
+      </div>
+
+      <!--div class="col-md-4">
+
+        <ol class="breadcrumb pull-right no-margin-bottom">
+          <li><a href="#">Admin panel</a></li>
+          <li><a href="#">Messages</a></li>
+          <li class="active">Inbox</li>
+        </ol
+
+      </div>-->
+    </section> <!-- / PAGE TITLE -->
+
+    <div class="container-fluid white-bg">
+
+      <div class="row">
+
+        <aside class="col-md-2 fix-on-scroll">
+
+          <!--div class="margin-bottom-30">
+            <a href="compose.php" class="btn btn-danger form-control">Compose</a>
+          </div-->
+
+          <ul class="nav nav-messages margin-bottom-30">
+            <li><a href="#" class="active"><span class="badge pull-right">12</span> Bandeja de entrada</a></li>
+            <li><a href="#" class=""><span class="badge pull-right">5</span> Transferidos</a></li>
+            <!--li><a href="#" class="">Important</a></li>
+            <li><a href="#" class="">Sent</a></li-->
+            <li><a href="#" class=""><span class="badge pull-right">1</span> Finalizados</a></li>
+            <!--li><a href="#" class=""><span class="badge pull-right">31</span> Trash</a></li-->
+          </ul>
+
+        </aside> <!-- / aside -->
 
 
-  <!-- - - - - - - - - - - - - -->
-  <!-- start of TOP NAVIGATION -->
-  <!-- - - - - - - - - - - - - -->
-  <!--nav class="navbar navbar-top navbar-static-top">
-    <div class="container-fluid">
+        <div class="col-md-10">
 
-  <!-- PAGE TITLE -->
-  <section id="page-title" class="row">
-
-    <div class="col-md-8">
-      <h1>Bandeja de Entrada</h1>
-      <p class="lead">Tiene <span class="label label-warning">122</span> mensajes, <span class="label label-danger">8</span> sin leer.</p>
-    </div>
-
-    <!--div class="col-md-4">
-
-      <ol class="breadcrumb pull-right no-margin-bottom">
-        <li><a href="#">Admin panel</a></li>
-        <li><a href="#">Messages</a></li>
-        <li class="active">Inbox</li>
-      </ol-->
-
-    </div>
-  </section> <!-- / PAGE TITLE -->
-
-  <div class="container-fluid white-bg">
-
-    <div class="row">
-
-      <aside class="col-md-2 fix-on-scroll">
-
-        <!--div class="margin-bottom-30">
-          <a href="compose.php" class="btn btn-danger form-control">Compose</a>
-        </div-->
-
-        <ul class="nav nav-messages margin-bottom-30">
-          <li><a href="#" class="active"><span class="badge pull-right">12</span> Bandeja de entrada</a></li>
-          <li><a href="#" class=""><span class="badge pull-right">5</span> Transferidos</a></li>
-          <!--li><a href="#" class="">Important</a></li>
-          <li><a href="#" class="">Sent</a></li-->
-          <li><a href="#" class=""><span class="badge pull-right">1</span> Finalizados</a></li>
-          <!--li><a href="#" class=""><span class="badge pull-right">31</span> Trash</a></li-->
-        </ul>
-
-      </aside> <!-- / aside -->
-
-
-      <div class="col-md-10">
-
-        <div class="margin-bottom-15">
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <i class="ti-check-box"></i> <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#" class="checkbox-menu all">Todos</a></li>
-              <li><a href="#" class="checkbox-menu none">Ninguno</a></li>
-              <li class="divider"></li>
-              <li><a href="#" class="checkbox-menu read">Leídos</a></li>
-              <li><a href="#" class="checkbox-menu unread">No leídos</a></li>
-              <li class="divider"></li>
-              <li><a href="#" class="checkbox-menu starred">Favoritos</a></li>
-              <li><a href="#" class="checkbox-menu unstarred">No favoritos</a></li>
-            </ul>
-          </div>
-
-          <div class="pull-right">
-            <span class="margin-right-15"><b>1</b>–<b>50</b> de <b>15,737</b></span>
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-primary"><i class="ti-angle-left"></i></button>
-              <button type="button" class="btn btn-primary"><i class="ti-angle-right"></i></button>
+          <div class="margin-bottom-15">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="ti-check-box"></i> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="checkbox-menu all">Todos</a></li>
+                <li><a href="#" class="checkbox-menu none">Ninguno</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="checkbox-menu read">Leídos</a></li>
+                <li><a href="#" class="checkbox-menu unread">No leídos</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="checkbox-menu starred">Favoritos</a></li>
+                <li><a href="#" class="checkbox-menu unstarred">No favoritos</a></li>
+              </ul>
             </div>
+
+            <div class="pull-right">
+              <span class="margin-right-15"><b>1</b>–<b>50</b> de <b>15,737</b></span>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary"><i class="ti-angle-left"></i></button>
+                <button type="button" class="btn btn-primary"><i class="ti-angle-right"></i></button>
+              </div>
+            </div>
+
           </div>
 
-        </div>
+          <table class="table messages-table table-hover">
+            <tbody>
+              <tr class="unread starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-danger"></span><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <tr>
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Daenerys Targaryen</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-primary"></span><a href="mail-single.php">Alementum tellus at, tincidunt nulla. Nunc?</a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">In hac habitasse platea dictumst. Vestibulum eu lacus at turpis.</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">6:41 am</a></td>
+              </tr>
+              <tr class="unread">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr>
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Ned Stark</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-success">sports</span> <span class="label label-primary">school</span><a href="mail-single.php">Aliquam ac turpis tempor, elementum tellus at, tincidunt nulla. Nunc?</a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi.</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">6:41 am</a></td>
+              </tr-->
 
-        <table class="table messages-table table-hover">
-          <tbody>
-            <tr class="unread starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-danger"></span><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <tr>
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Daenerys Targaryen</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-primary"></span><a href="mail-single.php">Alementum tellus at, tincidunt nulla. Nunc?</a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">In hac habitasse platea dictumst. Vestibulum eu lacus at turpis.</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">6:41 am</a></td>
-            </tr>
-            <tr class="unread">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr>
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Ned Stark</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-success">sports</span> <span class="label label-primary">school</span><a href="mail-single.php">Aliquam ac turpis tempor, elementum tellus at, tincidunt nulla. Nunc?</a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi.</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">6:41 am</a></td>
-            </tr-->
+              <tr class="starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <!--tr class="unread starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Dursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Dolor sit amet, consectetur adipiscing elit, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="unread">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donecit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><span class="label label-danger">design</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-danger">design</span><span class="label label-primary">school</span><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><span class="label label-primary">school</span><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
 
-            <tr class="starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <!--tr class="unread starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Dursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Dolor sit amet, consectetur adipiscing elit, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="unread">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donecit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><span class="label label-danger">design</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-danger">design</span><span class="label label-primary">school</span><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><span class="label label-primary">school</span><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
+              <!--tr class="starred">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
 
-            <!--tr class="starred">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-primary">school</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-danger">design</span><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
+                <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
+              <!--tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr-->
 
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
-              <td class="subject hidden-xs"><div><span class="label label-warning">programming</span><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Tyrion Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Arya Stark</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Donec dapibus leo vel turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Jon Snow</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Leo vel turpis cursus ultrices. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
-            <!--tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Administrator</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Turpis cursus ultrices. Curabitur sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">Consectetur adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr-->
+              <tr class="">
+                <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
+                <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
+                <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
+                <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
+                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+              </tr>
 
-            <tr class="">
-              <th class="icons" scope="row"><input type="checkbox" class="tiny"> <i class="ti-star pull-right"></i></th>
-              <td class="from"><div><a href="mail-single.php">Cersei Lannister</a></div></td>
-              <td class="subject hidden-xs"><div><a href="mail-single.php">Sit amet imperdiet mauris. Donec at aliquet nisi. </a></div></td>
-              <td class="summary hidden-xs"><div><a href="mail-single.php">A adipiscing elit. Vivamus viverra justo ac dui condimentum, eget bibendum lectus accumsan. Nulla facilisi</a></div></td>
-              <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
-            </tr>
+            </tbody>
+          </table> <!-- /table -->
+        </div> <!-- / col-md-10 -->
+      </div> <!-- / row -->
+    </div> <!-- / container-fluid -->
 
-          </tbody>
-        </table> <!-- /table -->
-
-      </div> <!-- / col-md-10 -->
-
-    </div> <!-- / row -->
-
-
-  </div> <!-- / container-fluid -->
-
-
-
-<footer>
-  <p>Powered by <a href="#">SugarRush</a> Admin Panel</p>
-</footer>
-
-
-<!--/main> <!-- /playground -->
-
-
-<!-- - - - - - - - - - - - - -->
-<!-- start of NOTIFICATIONS  -->
-<!-- - - - - - - - - - - - - -->
+<!--/main> /playground -->
+    <cm-footer></cm-footer>
+    </main> <!-- /playground -->
+    <cm-scrolltop></cm-scrolltop>
