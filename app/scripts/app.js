@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('drenajesWebInterfazApp', [
     'ngAnimate',
@@ -107,4 +108,8 @@ angular
   .component('cmTopnavigation',  {
     templateUrl: 'views/componentes/topnavigation.html',
     controller: 'TopCtrl'
+  })
+  .component('inbox', {
+    templateUrl: 'views/inbox.html',
+    controller: 'InboxCtrl'
   });

@@ -1,0 +1,33 @@
+{
+  "records": [
+    {
+      "id": "2105",
+      "sender": "Darth Vader",
+      "type": "Problem",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "2120",
+      "sender": "Darth Vein",
+      "type": "Problem",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "2153",
+      "sender": "Kailo Ren",
+      "type": "Problem",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "2201",
+      "sender": "Star Killer",
+      "type": "Problem",
+      "date": "10/10/2017"
+    }
+  ],
+  "metadata": {
+    "total_records": "4",
+    "records": "4",
+    "pages": "1"
+  }
+}
