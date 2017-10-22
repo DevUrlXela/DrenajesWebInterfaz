@@ -21,14 +21,9 @@
             <i class="ti-check-box"></i> <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#" class="checkbox-menu all">Todos</a></li>
-            <li><a href="#" class="checkbox-menu none">Ninguno</a></li>
             <li class="divider"></li>
             <li><a href="#" class="checkbox-menu read">Leídos</a></li>
             <li><a href="#" class="checkbox-menu unread">No leídos</a></li>
-            <li class="divider"></li>
-            <li><a href="#" class="checkbox-menu starred">Favoritos</a></li>
-            <li><a href="#" class="checkbox-menu unstarred">No favoritos</a></li>
           </ul>
         </div>
         <div class="pull-right">
@@ -42,7 +37,7 @@
       <table class="table messages-table table-hover">
         <tbody>
           <tr ng-repeat="record in records" class="unread starred">
-            <th class="icons" scope="row"><input type="checkbox" class="tiny"><i class="ti-star pull-right"></i></th>
+            <th class="icons" scope="row"><input type="checkbox" class="tiny"></th>
             <td class="from"><div><a href="mail-single.php">{{record.sender}}</a></div></td>
             <td class="subject hidden-xs"><div><span class="label label-danger"></span><a href="mail-single.php">{{record.id}}</a></div></td>
             <td class="summary hidden-xs"><div><a href="mail-single.php">{{record.type}}</a></div></td>
