@@ -1,12 +1,12 @@
 jQuery(document).ready(function() {
 
-    jQuery('.btn-show-chat, .close-multi-panel').click(function (e) {
+    jQuery(document).on('click','.btn-show-chat, .close-multi-panel', function (e) {
         e.preventDefault();
         jQuery('body').toggleClass('collapsed-alertbar');
         jQuery(window).resize();
     });
 
-    jQuery('.show-hide-sidebar').click(function(e) {
+    jQuery(document).on('click','.show-hide-sidebar',function(e) {
         e.preventDefault();
         jQuery('body').toggleClass('collapsed-sidebar');
 
@@ -138,33 +138,6 @@ jQuery(document).ready(function() {
         var _t = jQuery(this);
         _t.closest('.panel').find('.panel-body').slideToggle();
     });
-
-	//////////////////////////
-    // SIDEBAR SUBMENU ///////
-    //////////////////////////
-	jQuery('#sidebar .nav#main-nav > li > ul').each(function() {
-		var _t = jQuery(this);
-		var _li = _t.parent();
-		var _a = _li.find('> a');
-
-		_a.click(function(e) {
-			e.preventDefault();
-
-            var s_width = jQuery( window ).width();
-            if ((s_width >= 768) && (!jQuery('body').hasClass('collapsed-sidebar')) ) {
-                if (!_a.hasClass('active')) {
-                    jQuery('#sidebar .nav a.active').removeClass('active').parent().find('> ul').slideToggle();
-                }
-
-    			_a.toggleClass('active');
-    			_t.slideToggle();
-            }
-		})
-
-        if (_t.find('.active_submenu').length > 0) {
-            _a.click();
-        }
-	});
 
     ////////////////////////
     // FIX ON SCROLL ///////

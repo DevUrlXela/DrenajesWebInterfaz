@@ -2560,7 +2560,7 @@ ol.icon-bolt li:before {
   text-decoration: none!important;
 }
 .login-page .login-container {
-  display: table-cell;
+  /*display: table-cell;*/
   vertical-align: middle;
 }
 .login-page .login-container .panel-container {

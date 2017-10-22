@@ -25,9 +25,13 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/login', {
-        templateUrl: 'views/login.html',
+      .when('/login', {   //URL en el navegador
+        templateUrl: 'views/login.html', //html que va a mostrar
         controller: 'LoginCtrl'
+      })
+      .when('/transferir', {
+        templateUrl: 'views/transferir.html',
+        controller: 'TransCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -107,4 +111,16 @@ angular
   .component('cmTopnavigation',  {
     templateUrl: 'views/componentes/topnavigation.html',
     controller: 'TopCtrl'
-  });
+  })
+  .run(function($rootScope, $location, sesion){
+    //al cambiar de rutas
+    $rootScope.$on('$routeChangeStart', function()
+    {
+        if(sesion.isLoged() == false){
+          $location.url('/login')
+        }
+        else if($location.path() == '/login'){
+          $location.url('/')
+        }
+    })
+});
