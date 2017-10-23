@@ -6,86 +6,47 @@
   <section id="page-title" class="row">
 
     <div class="col-md-8">
-      <h1>Compose</h1>
-      <p class="lead">Write a new message</p>
+      <h1>Transferir</h1>
+      <p class="lead">Expediente no. {{no_expediente}}</p>
     </div>
 
     <div class="col-md-4">
 
-      <ol class="breadcrumb pull-right no-margin-bottom">
-        <li><a href="#">Admin panel</a></li>
-        <li><a href="#">Messages</a></li>
-        <li class="active">Compose</li>
-      </ol>
+
 
     </div>
   </section> <!-- / PAGE TITLE -->
 
   <div class="container-fluid">
 
-    <div class="row">
-      <aside class="col-md-2 fix-on-scroll">
-
-        <ul class="nav nav-messages margin-bottom-30">
-          <li><a href="#" class="active"><span class="label pull-right label-warning label-as-badge">12</span> Inbox</a></li>
-          <li><a href="#" class=""><span class="label pull-right label-warning label-as-badge">5</span> Starred</a></li>
-          <li><a href="#" class="">Important</a></li>
-          <li><a href="#" class="">Sent</a></li>
-          <li><a href="#" class=""><span class="label pull-right label-warning label-as-badge">1</span> Drafts</a></li>
-          <li><a href="#" class=""><span class="label pull-right label-warning label-as-badge">31</span> Trash</a></li>
-        </ul>
-
-      </aside>
-
-      <div class="col-md-10">
 
         <section class="panel">
 
           <div class="panel-body">
 
             <div class="form-group">
-              <label>To:</label>
+              <label>Para:</label>
+
               <select class="multipleselect form-control" multiple>
+                <!-- Jefaturas proximamente  -->
                 <option value="BQ" data-subtitle="Administrator" data-left="<img src=''>" data-right="1">Bruno Q.</option>
                 <option value="SA" data-subtitle="Administrator" data-left="<img src=''>" data-right="2">Silvina A.</option>
                 <option value="JD" data-subtitle="User" data-left="<img src=''>" data-right="3">John Doe</option>
               </select>
+
             </div> <!-- / form-group -->
 
             <div class="form-group">
-              <label for="simplecolor">Subject:</label>
+              <label for="simplecolor">Razon:</label>
               <input type="text" class="form-control" id="simplecolor" value="" />
             </div>  <!-- / form-group -->
 
-            <div class="btn-toolbar margin-bottom-15" data-role="editor-toolbar" data-target="#editor">
-              <div class="btn-group">
-                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="ti-smallcap"></i>&nbsp;<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="#" data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                  <li><a href="#" data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                  <li><a href="#" data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                  </ul>
-              </div> <!-- / form-group -->
 
-              <div class="btn-group">
-                <a href="#" class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
-                <a href="#" class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="ti-Italic"></i></a>
-                <a href="#" class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
-                <a href="#" class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="ti-underline"></i></a>
-              </div> <!-- / form-group -->
+            <div class="form-group">
+              <label for="simplecolor">Observaciones:</label>
+              <div class="wysiwyg-textarea"></div>
+            </div>  <!-- / form-group -->
 
-              <div class="btn-group">
-                <a href="#" class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="ti-list"></i></a>
-                <a href="#" class="btn" data-edit="insertorderedlist" title="Number list"><i class="ti-list-ol"></i></a>
-              </div> <!-- / form-group -->
-
-              <div class="btn-group">
-                <a href="#" class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="ti-back-left"></i></a>
-                <a href="#" class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="ti-back-right"></i></a>
-              </div>
-            </div> <!-- / btn-toolbar -->
-
-            <div class="wysiwyg-textarea"></div>
 
 
 

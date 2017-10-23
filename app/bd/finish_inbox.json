@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "id": "47",
+      "sender": "Sauron",
+      "type": "Problem",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "51",
+      "sender": "Gandalf",
+      "type": "Problem",
+      "date": "10/10/2017"
+    }
+  ],
+  "metadata": {
+    "total_records": "2",
+    "records": "2",
+    "pages": "1"
+  }
+}
