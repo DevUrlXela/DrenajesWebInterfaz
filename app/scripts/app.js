@@ -34,7 +34,6 @@ angular
         templateUrl: 'views/transferir.html',
         controller: 'TransCtrl'
       })
-<<<<<<< HEAD
       .when('/detalle-expediente', {
         templateUrl: 'views/detalle.html',
         controller: 'DetalleCtrl'
@@ -42,15 +41,14 @@ angular
       .when('/modificar-expediente', {
         templateUrl: 'views/modificar.html',
         controller: 'ModificarCtrl'
-=======
+      })
       .when('/consulta', {
         templateUrl: 'views/consultaexp.html',
         controller: 'ConsultaCtrl'
->>>>>>> a634bb5aae620bc66dc02cdddc255dceb66aa514
       })
       .otherwise({
         redirectTo: '/'
-      });
+      })
   })
   .service('apiService', function($http) {
     var apiURL = '';
@@ -142,4 +140,4 @@ angular
           $location.url('/')
         }
     })
-});
+  });
