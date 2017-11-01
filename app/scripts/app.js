@@ -51,8 +51,9 @@ angular
       })
   })
   .service('apiService', function($http) {
-    var apiURL = '';
-    // var apiURL = 'http://127.0.0.1:8000';
+    //var apiURL = '';
+    var apiURL = 'http://127.0.0.1:8000';
+    
     var obtener = function(endpoint) {
       return $http.get(apiURL+endpoint);
     };
@@ -81,6 +82,18 @@ angular
       return $cookies.getObject('sesion').token
     }
 
+    var getId = function(){
+      return $cookies.getObject('sesion').idUser
+    }
+
+    var getRol = function(){
+      return $cookies.getObject('sesion').rol
+    }
+
+    var getUser = function(){
+      return $cookies.getObject('sesion').user
+    }
+
     var getCookie = function(){
       return $cookies.getObject('sesion')
     }
@@ -94,9 +107,9 @@ angular
       }
     }
 
-    var login = function(token,idUser,user){
+    var login = function(token, idUser, user, rol){
 
-        $cookies.putObject('sesion', {'token': token ,'idUser': idUser, 'user': user})
+        $cookies.putObject('sesion', {'token': token , 'rol': rol, 'idUser': idUser, 'user': user})
     }
 
 
@@ -109,14 +122,18 @@ angular
       logout : logout,
       isLoged : isLoged,
       getToken: getToken,
-      getCookie : getCookie
+      getCookie : getCookie,
+      getUser: getUser,
+      getRol : getRol,
+      getId : getId
     }
   })
   .component('cmFooter', {
     templateUrl: 'views/componentes/footer.html'
   })
   .component('cmSidebar', {
-    templateUrl: 'views/componentes/sidebar.html'
+    templateUrl: 'views/componentes/sidebar.html',
+    controller:'SidebarCtrl'
   })
   .component('cmScrolltop',  {
     templateUrl: 'views/componentes/scrolltop.html'
