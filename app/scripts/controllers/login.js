@@ -8,7 +8,7 @@ angular.module('drenajesWebInterfazApp')
     $scope.logearse = function(){
 
     //apiService.crear('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDMWY9z1PPeX-6adeIMRZBwk87ilFeH3bw',{"email" : $scope.user ,"password" : $scope.password,"returnSecureToken": true})
-    apiService.crear('/expedientes/user/login/',{"username" : $scope.user ,"password" : $scope.password})
+    apiService.post('/expedientes/user/login/', {"username" : $scope.user ,"password" : $scope.password})
     .then(function successCallback(response) {
       sesion.login(response.data.token, response.data.user, response.data.user, response.data.rol)
       $location.url('/')

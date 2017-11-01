@@ -10,18 +10,18 @@ angular.module('drenajesWebInterfazApp')
   $scope.transferred_metadata = [];
   $scope.finish_metadata = [];
 
-  apiService.obtener('/bd/standby_inbox.json').then(response => {
+  apiService.get('/bd/standby_inbox.json').then(response => {
     $scope.standby_records = response.data.records;
     $scope.standby_metadata = response.data.metadata;
     $scope.changeInbox(0);
   });
 
-  apiService.obtener('/bd/transferred_inbox.json').then(response => {
+  apiService.get('/bd/transferred_inbox.json').then(response => {
     $scope.transferred_records = response.data.records;
     $scope.transferred_metadata = response.data.metadata;
   });
 
-  apiService.obtener('/bd/finish_inbox.json').then(response => {
+  apiService.get('/bd/finish_inbox.json').then(response => {
     $scope.finish_records = response.data.records;
     $scope.finish_metadata = response.data.metadata;
   });

@@ -52,28 +52,41 @@ angular
   })
   .service('apiService', function($http) {
     //var apiURL = '';
-    var apiURL = 'http://127.0.0.1:8000';
-    
-    var obtener = function(endpoint) {
-      return $http.get(apiURL+endpoint);
+    var apiURL = 'http://localhost:8000';
+
+    var get = function(endpoint, token) {
+      if(token != undefined){
+        return $http.get(apiURL+endpoint, { "headers" : {"Content-Type" : "application/json", "Authorization" : "Beared " + token } });
+      }
+        return $http.get(apiURL+endpoint);
     };
-    var crear = function(endpoint, params) {
+    var post = function(endpoint, params, token) {
+      if(token != undefined){
+        return $http.post(apiURL+endpoint, params, { "headers" : {"Content-Type" : "application/json", "Authorization" : "Beared " + token } });
+      }
       return $http.post(apiURL+endpoint, params);
+
     };
 
-    var modificar = function(endpoint, params) {
-      return $http.put(apiURL+endpoint, params);
+    var put = function(endpoint, params, token) {
+      if(token != undefined){
+        return $http.put(apiURL+endpoint, params,{ "headers" : {"Content-Type" : "application/json", "Authorization" : "Beared " + token } });
+      }
+      return $http.put(apiURL+endpoint, params)
     };
 
-    var borrar = function(endpoint){
-      return $http.delete(apiURL+endpoint);
+    var del = function(endpoint, token){
+      if(token != undefined){
+        return $http.delete(apiURL+endpoint,{ "headers" : {"Content-Type" : "application/json", "Authorization" : "Beared " + token } });
+      }
+      return $http.delete(apiURL+endpoint)
     };
 
     return {
-      obtener: obtener,
-      crear: crear,
-      modificar: modificar,
-      borrar: borrar
+      get: get,
+      post: post,
+      put: put,
+      del: del
     };
   })
   .service('sesion', function($cookies, apiService){

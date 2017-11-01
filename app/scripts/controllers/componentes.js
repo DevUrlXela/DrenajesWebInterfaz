@@ -4,7 +4,7 @@ angular.module('drenajesWebInterfazApp')
   .controller('TopCtrl', function ($scope, $location, sesion, apiService) {
     $scope.nombre_usuario = sesion.getCookie().user;
     $scope.cerrar = function(){
-      apiService.crear('/expedientes/user/logout/', {"token": sesion.getToken()})
+      apiService.get('/expedientes/user/logout/', sesion.getToken())
       .then(function successCallback(response) {
         sesion.logout();
         $location.url('/login')
@@ -14,7 +14,7 @@ angular.module('drenajesWebInterfazApp')
       })
     }
 
-    apiService.crear('/expedientes/expediente/noleidos/',{"token": sesion.getToken()})
+    apiService.get('/expedientes/expediente/noleidos/', sesion.getToken() )
     .then(function successCallback(response) {
       $scope.noleidos = response.data.numero
     })
