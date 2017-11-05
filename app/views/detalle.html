@@ -8,85 +8,77 @@
       <div class="col-md-12">
         <h2> Detalle expediente </h2>
         <div class="row">
+          <section class="panel">
+            <div class="panel-body">
+              <div class="col-md-3">
+                <label> ID: <span>4907</span></label>
+              </div>
+
+              <div class="col-md-3">
+                <label> Numero de folio: <span>0940</span></label>
+              </div>
+
+              <div class="col-md-3">
+                <label>Fecha: <span>17/10/2017</span></label>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="col-md-6">
         <section class="panel">
-          <div class="panel-body">
-            <div class="col-md-3">
-              <label> ID: <span>4907</span></label>
+            <div class="panel-body">
+              <div class="col-md-6 form-group">
+                <label>Tipo</label>
+                <input type="text" class="form-control" id="" value="Tipo de expediente" disabled>
+              </div>
+              <div class="col-md-6">
+                <label>Remitente</label>
+                <input type="text" class="form-control" value="Remitente" disabled>
+              </div>
             </div>
-
-            <div class="col-md-3">
-              <label> Numero de folio: <span>0940</span></label>
+            <div class="panel-body">
+              <div style="height:75px;"class="col-md-6 form-group">
+                <label>Firma</label>
+                <input class="form-control" type="text" value="Signatario" disabled>
+              </div>
             </div>
-
-            <div class="col-md-3">
-              <label>Fecha: <span>17/10/2017</span></label>
-            </div>
-          </div>
         </section>
       </div>
 
+      <div class="col-md-6">
+        <section class="panel">
+          <header class="panel-heading">
+            <h3 class="panel-tittle"> Lista de requisitos </h3>
+        </header>
+          <div class="panel-body" style="">
+          <select multiple="" class="form-control" style="height: 125px;" disabled>
+             <option>Requisito 1</option>
+             <option>Requisito 2</option>
+             <option>Requisito 3</option>
+             <option>Requisito 4</option>
+             <option>Requisito 5</option>
+           </select>
+        </div>
+        </section>
+      </div>
 
       <div class="col-md-6">
-      <section class="panel">
-        <div class="row">
-        <div class="panel-body">
-          <div class="col-md-6">
-            <select class="form-control">
-              <option value="">Cambiar estado a: </option>
-              <option>Estado 1</option>
-              <option>Estado 2</option>
-              <option>Estado 3</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <select class="form-control">
-              <option value="">Enviar a: </option>
-              <option>Jefatura 1</option>
-              <option>Jefatura 2</option>
-              <option>Jefatura 3</option>
-            </select>
-          </div>
-        </div>
-        </div>
-        <div class="panel-body">
-          <div class="col-md-6">
-            <label>Tipo</label>
-            <select class="form-control" disabled>
-              <option value="null">Tipo de expediente</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label>Remitente</label>
-            <select class="form-control" disabled>
-              <option value="null">Remitente</option>
-            </select>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="col-md-6">
-            <label>Enviado a</label>
-            <select class="form-control" disabled>
-              <option value="null">Destino</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label>Firma</label>
-            <select class="form-control" disabled>
-              <option value="null">Signatorio</option>
-            </select>
-          </div>
-        </div>
-        <div class="panel-body">
+        <section class="panel">
+          <header class="panel-heading">
+            <h3 class="panel-tittle">Estados</h3>
+          </header>
+          <div class="panel-body">
           <div class="col-md-12">
-            <label>Estado</label>
-            <table class="table table-striped" style="height: 150px; display: -moz-groupbox;">
+            <table class="table table-striped" style="height: 180px; display: -moz-groupbox;">
               <thead>
-                <tr class="active" style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
                   <th>Estado</th>
                   <th>Fecha de cambio</th>
                 </tr>
               </thead>
-              <tbody style="overflow-y: scroll; height: 100px; width: 100%; position: absolute;">
+              <tbody style="overflow-y: scroll; height: 110px; width: 100%; position: absolute;">
                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
                   <td> Estado 2 </td>
                   <td> 10/11/20117
@@ -99,155 +91,157 @@
             </table>
          </div>
         </div>
-        <div class="panel-body">
-           <div class="col-md-12">
-             <label >Observaciones</label>
-             <div class="table-responsive">
-               <table class="table table-striped" style="height: 150px; display: -moz-groupbox;">
-               <thead>
-                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                   <th class="col-md-4">Titulo</th>
-                   <th class="col-md-8">Observación</th>
-                 </tr>
-               </thead>
-               <tbody style="overflow-y: scroll; height: 100px; width: 100%; position: absolute;">
-                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                   <td class="col-md-4"> Observación 1  </td>
-                   <td class="col-md-8"> En el siguiente expediente se llega a determinar
-                   que puede ser o no factible ya que ... </td>
-                 </tr>
-                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                   <td class="col-md-4"> Observación 2  </td>
-                   <td class="col-md-8"> En el siguiente expediente se llega a determinar
-                   que puede ser o no factible ya que ... </td>
-                 </tr>
-                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                   <td class="col-md-4"> Observación 2  </td>
-                   <td class="col-md-8"> En el siguiente expediente se llega a determinar
-                   que puede ser o no factible ya que ... </td>
-                 </tr>
-                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                   <td class="col-md-4"> Observación 2  </td>
-                   <td class="col-md-8"> En el siguiente expediente se llega a determinar
-                   que puede ser o no factible ya que ... </td>
-                 </tr>
-               </tbody>
-             </table>
-             </div>
-           </div>
-         </div>
-
-
-      </section>
-    </div>
-
-    <div class="col-md-6">
-        <section class="panel">
-          <div class="panel-body  flex-last">
-            <div class="col-xs-6" style="height: 70px; ">
-              <a href="#" class="btn btn-success">Autorizar</a>
-            </div>
-            <div class="col-xs-6" style="height: 70px;  ">
-              <a href="#" class="btn btn-danger"> Dar de baja </a>
-            </div>
-            <div class="col-xs-6" style="height: 30px; ">
-              <a href="#" class="btn btn-warning"> Modificar </a>
-            </div>
-            <div class="col-xs-6" style="height: 30px;">
-              <a href="#"  class="btn btn-default" >Cancelar</a>
-            </div>
-          </div>
-          <div class="panel-body">
-            <form>
-               <div class="checkbox">
-                 <input type="checkbox" class="tiny checkbox-primary labelauty" checked="" value="" id="labelauty-958905" style="display: none;">
-                 <label for="labelauty-958905"><span class="labelauty-unchecked-image"></span>
-                 <span class="labelauty-checked-image"></span></label>
-                 <label>Respondido con oficio</label>
-               </div>
-               <div class="checkbox" style="height: 35px;">
-                <input type="checkbox" class="tiny labelauty" checked="" value="" id="labelauty-386204" style="display: none;">
-                <label for="labelauty-386204"><span class="labelauty-unchecked-image"></span>
-                <span class="labelauty-checked-image"></span></label>
-                <label>Enviado por providencia</label>
-               </div>
-            </form>
-          </div>
-          <div class="panel-body" style="">
-            <div class="col-md-12">
-              <label> Lista de requisitos </label>
-              <select multiple="" class="form-control" style="height: 170px;" disabled>
-                 <option>Requisito 1</option>
-                 <option>Requisito 2</option>
-                 <option>Requisito 3</option>
-                 <option>Requisito 4</option>
-                 <option>Requisito 5</option>
-               </select>
-            </div>
-          </div>
-          <div class="panel-body">
-            <div class="col-md-12">
-              <label >Observaciones</label>
-              <div class="table-responsive">
-                <table class="table table-striped"style="height: 150px; display: -moz-groupbox;">
-                  <thead>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <th>Nombre</th>
-                      <th>Fecha de ingreso</th>
-                      <th>Fecha de salida</th>
-                    </tr>
-                  </thead>
-                  <tbody style="overflow-y: scroll; height: 100px; width: 100%; position: absolute;">
-                   <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/11/2017</td>
-                      <td> - </td>
-                    </tr>
-                   <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                    <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
-                      <td > Jefatura 1</td>
-                      <td> 09/09/2017</td>
-                      <td > 07/11/2017</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-            </div>
-
-          </div>
-
         </section>
+      </div>
+
+      <div class="col-md-6">
+        <section class="panel">
+          <header class="panel-heading">
+            <h3 class="panel-tittle">Historial</h3>
+          </header>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-striped"style="height: 180px; display: -moz-groupbox;">
+                <thead>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <th>Nombre</th>
+                    <th>Fecha de ingreso</th>
+                    <th>Fecha de salida</th>
+                  </tr>
+                </thead>
+                <tbody style="overflow-y: scroll; height: 110px; width: 100%; position: absolute;">
+                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/11/2017</td>
+                    <td> - </td>
+                  </tr>
+                 <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td > Jefatura 1</td>
+                    <td> 09/09/2017</td>
+                    <td > 07/11/2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-md-12">
+        <section class="panel">
+          <header class="panel-heading">
+            <h3 class="panel-tittle">Observaciones</h3>
+          </header>
+          <div class="panel-body">
+           <div class="col-md-12">
+            <div class="table-responsive">
+              <table id="mytable" class="table table-striped" style="height: 280px; display: -moz-groupbox;">
+                <thead>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <th class="col-md-4">Usuario</th>
+                    <th class="col-md-8">Observación</th>
+                  </tr>
+                </thead>
+                <tbody style="overflow-y: scroll; height: 250px; width: 100%; position: absolute;">
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td class="col-md-4"> Director</td>
+                    <td class="col-md-8"> En el siguiente expediente se llega a determinar
+                    que puede ser o no factible ya que ... </td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td class="col-md-4"> Director   </td>
+                    <td class="col-md-8"> En el siguiente expediente se llega a determinar
+                    que puede ser o no factible ya que ... </td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td class="col-md-4"> Jefatura 1  </td>
+                    <td class="col-md-8"> En el siguiente expediente se llega a determinar
+                    que puede ser o no factible ya que ... </td>
+                  </tr>
+                  <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
+                    <td class="col-md-4"> Jefatura 3  </td>
+                    <td class="col-md-8"> En el siguiente expediente se llega a determinar
+                    que puede ser o no factible ya que ... </td>
+                  </tr>
+                </tbody>
+              </table>
+              <form>
+                <div class="col-md-11">
+                  <input class="form-control" id="">
+                </div>
+                <div class="col-md-1">
+                  <button class="btn btn-primary form-control">+</button>
+                </div>
+              </form>
+            </div>
+
+           </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-md-12">
+        <section class="panel">
+          <div class="panel-body">
+          <div class="col-xs-3">
+            <div class="panel-body flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a href="#" class="btn btn-success">Autorizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a href="#" class="btn btn-warning">Modificar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a href="#" class="btn btn-primary">Transferir</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a href="#" class="btn btn-deafult">Cancelar</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>
+
     </div>
-
-
   </div>
-</div>
-</div>
-
 
 
   <cm-footer></cm-footer>

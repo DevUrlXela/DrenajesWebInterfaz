@@ -46,6 +46,10 @@ angular
         templateUrl: 'views/consultaexp.html',
         controller: 'ConsultaCtrl'
       })
+      .when('/crear-expediente', {
+        templateUrl: 'views/crearexp.html',
+        controller: 'CrearExpCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       })
