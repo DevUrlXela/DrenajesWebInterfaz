@@ -2,26 +2,26 @@
   "records": [
     {
       "id": "2105",
-      "sender": "Darth Vader",
-      "type": "Problem",
+      "user": "Darth Vader",
+      "subject": "Problem",
       "date": "10/10/2017"
     },
     {
       "id": "2120",
-      "sender": "Darth Vein",
-      "type": "Problem",
+      "user": "Darth Vein",
+      "subject": "Problem",
       "date": "10/10/2017"
     },
     {
       "id": "2153",
-      "sender": "Kailo Ren",
-      "type": "Problem",
+      "user": "Kailo Ren",
+      "subject": "Problem",
       "date": "10/10/2017"
     },
     {
       "id": "2201",
-      "sender": "Star Killer",
-      "type": "Problem",
+      "user": "Star Killer",
+      "subject": "Problem",
       "date": "10/10/2017"
     }
   ],
