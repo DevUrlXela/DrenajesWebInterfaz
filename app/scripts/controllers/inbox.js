@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('drenajesWebInterfazApp')
-.controller('InboxCtrl', function ($scope, $http, sesion, apiService) {
+.controller('InboxCtrl', function ($scope, $http, $location, sesion, apiService) {
   $scope.records = []
   $scope.standby_records = [];
   $scope.transferred_records = [];
@@ -36,8 +36,10 @@ angular.module('drenajesWebInterfazApp')
     }
   }
 
-  $scope.clickExp = function(id) {
-    console.log(sesion.getToken());
-    // apiService.post('/expedientes/expediente/' + id + '/leido/', {} ,sesion.getToken())
+  $scope.openExp = function(id) {
+    apiService.post('/expedientes/expediente/' + id + '/leido/', {"token": sesion.getToken()} ,sesion.getToken()).then(response => {
+      console.log(response);
+      $location.path('/detalle-expediente/' + id);
+    });
   }
 });

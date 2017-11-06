@@ -37,10 +37,10 @@
       <table class="table messages-table table-hover">
         <tbody>
           <tr ng-repeat="record in records" class="unread starred">
-            <td class="from"><div><a ng-click="clickExp(record.id)">{{record.user}}</a></div></td>
-            <td class="subject hidden-xs"><div><span class="label label-danger"></span><a ng-click="clickExp(record.id)">{{record.id}}</a></div></td>
-            <td class="summary hidden-xs"><div><a ng-click="clickExp(record.id)">{{record.subject}}</a></div></td>
-            <td class="date-time text-right"><a ng-click="clickExp(record.id)">{{record.date}}</a></td>
+            <td class="inbox-exp from"><div><a ng-click="openExp(record.id)">{{record.user}}</a></div></td>
+            <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-click="openExp(record.id)">{{record.id}}</a></div></td>
+            <td class="inbox-exp summary hidden-xs"><div><a ng-click="openExp(record.id)">{{record.subject}}</a></div></td>
+            <td class="inbox-exp date-time text-right"><a ng-click="openExp(record.id)">{{record.date}}</a></td>
           </tr>
         </tbody>
       </table>
