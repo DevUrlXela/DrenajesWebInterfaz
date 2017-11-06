@@ -34,7 +34,7 @@ angular
         templateUrl: 'views/transferir.html',
         controller: 'TransCtrl'
       })
-      .when('/detalle-expediente', {
+      .when('/detalle-expediente/:id', {
         templateUrl: 'views/detalle.html',
         controller: 'DetalleCtrl'
       })
