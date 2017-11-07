@@ -50,6 +50,10 @@ angular
         templateUrl: 'views/crearexp.html',
         controller: 'CrearExpCtrl'
       })
+      .when('/404', {
+        templateUrl: 'views/blank.html',
+        controller: 'ErrorCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       })
