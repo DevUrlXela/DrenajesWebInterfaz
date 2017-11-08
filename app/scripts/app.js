@@ -30,7 +30,7 @@ angular
         templateUrl: 'views/login.html', //html que va a mostrar
         controller: 'LoginCtrl'
       })
-      .when('/transferir', {
+      .when('/transferir/:id', {
         templateUrl: 'views/transferir.html',
         controller: 'TransCtrl'
       })
@@ -38,7 +38,7 @@ angular
         templateUrl: 'views/detalle.html',
         controller: 'DetalleCtrl'
       })
-      .when('/modificar-expediente', {
+      .when('/modificar-expediente/:id', {
         templateUrl: 'views/modificar.html',
         controller: 'ModificarCtrl'
       })
