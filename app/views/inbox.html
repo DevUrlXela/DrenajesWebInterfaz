@@ -9,9 +9,9 @@
   <div class="row">
     <aside class="col-md-2 fix-on-scroll">
       <ul class="nav nav-messages margin-bottom-30">
-        <li><a ng-click="changeInbox(0)" href="" class="active"><span class="badge pull-right">{{standby_metadata.total_records}}</span> Bandeja de entrada</a></li>
-        <li><a ng-click="changeInbox(1)" href="" class=""><span class="badge pull-right">{{transferred_metadata.total_records}}</span> Transferidos</a></li>
-        <li><a ng-click="changeInbox(2)" href="" class=""><span class="badge pull-right">{{finish_metadata.total_records}}</span> Finalizados</a></li>
+        <li><a href="/#!/home/entrada/1" class="active"><span class="badge pull-right">{{standby_metadata.total_records}}</span> Bandeja de entrada</a></li>
+        <li><a href="/#!/home/transferidos/1" class=""><span class="badge pull-right">{{transferred_metadata.total_records}}</span> Transferidos</a></li>
+        <li><a href="/#!/home/finalizados/1" class=""><span class="badge pull-right">{{finish_metadata.total_records}}</span> Finalizados</a></li>
       </ul>
     </aside>
     <div class="col-md-10">
@@ -36,11 +36,11 @@
       </div>
       <table class="table messages-table table-hover">
         <tbody>
-          <tr ng-repeat="record in records" class="unread starred">
-            <td class="inbox-exp from"><div><a ng-click="openExp(record.id)">{{record.user}}</a></div></td>
-            <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-click="openExp(record.id)">{{record.id}}</a></div></td>
-            <td class="inbox-exp summary hidden-xs"><div><a ng-click="openExp(record.id)">{{record.subject}}</a></div></td>
-            <td class="inbox-exp date-time text-right"><a ng-click="openExp(record.id)">{{record.date}}</a></td>
+          <tr ng-repeat="record in records" ng-class="record.leido ? 'read' : 'unread'">
+            <td class="inbox-exp from"><div><a ng-href="/detalle-expediente/{{record.id}}">{{record.enviado}}</a></div></td>
+            <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-href="/detalle-expediente/{{record.id}}">{{record.id}}</a></div></td>
+            <td class="inbox-exp summary hidden-xs"><div><a ng-href="/detalle-expediente/{{record.id}}">{{record.observaciones}}</a></div></td>
+            <td class="inbox-exp date-time text-right"><a ng-href="/detalle-expediente/{{record.id}}">{{record.fecha_envio}}</a></td>
           </tr>
         </tbody>
       </table>

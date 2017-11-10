@@ -22,7 +22,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/home/:bandeja/:pagina', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })

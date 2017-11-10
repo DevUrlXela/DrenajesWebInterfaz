@@ -12,12 +12,9 @@ angular.module('drenajesWebInterfazApp')
     .then(function successCallback(response) {
       sesion.login(response.data.token, response.data.user, response.data.user, response.data.rol)
       $location.url('/')
-      console.log(response.data.token)
     }, function errorCallback(response) {
       $scope.respuesta = 'Usuario o contraseña incorrectos';
     })
-
-
   }
 
 });
