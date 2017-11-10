@@ -14,16 +14,17 @@
               <div class="panel-body">
                 <div class="col-md-4">
                   <label> ID:</label>
-                  <input name="id" class="form-inline"type="text" text="1234" required>
+                  <input name="id" class="form-inline"type="number" required>
                 </div>
 
                 <div class="col-md-4">
                   <label> Numero de folio:</label>
-                  <input class="form-inline"type="text" text="1234" required>
+                  <input class="form-inline"type="number"  required>
                 </div>
 
                 <div class="col-md-4">
-                  <label>Fecha: <span>17/10/2017</span></label>
+                  <label>Fecha de creacion:</label>
+                  <input class="form-inline" type="date" value="{{fechaHoy}}"  required>
                 </div>
               </div>
             </section>
@@ -39,39 +40,23 @@
                   <div class="col-md-4">
                     <div class="panel-body">
                       <label for="">Tipo de expediente</label>
-                      <select class="form-control" name="" id="">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
+                      <input class="form-control" type="text">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="panel-body">
                       <label for="">Remitente</label>
-                      <input class="form-control" type="Remitente">
+                      <input class="form-control" type="text">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="panel-body">
                       <label for="">Firma</label>
-                      <input class="form-control" type="Remitente">
+                      <input class="form-control" type="text">
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12">
-                  <div class="col-md-4">
-                    <div class="panel-body">
-                      <label for="">Enviar a:</label>
-                      <select class="form-control" name="" id="">
-                        <option value="">Jefatura 1</option>
-                        <option value="">Jefatura 2</option>
-                        <option value="">Jefatura 3</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </section>
           </div>
       </form>
