@@ -9,7 +9,7 @@ angular.module('drenajesWebInterfazApp')
   $scope.finish_metadata = [];
   console.log($routeParams);
   if($routeParams.bandeja === "entrada") {
-    apiService.get('/expedientes/expediente/inbox/', sesion.getToken()).then(response => {
+    apiService.get('/expedientes/expediente/inbox/' + $routeParams.pagina + '/', sesion.getToken()).then(response => {
       $scope.records = response.data;
       trayShowing = 0;
     });
