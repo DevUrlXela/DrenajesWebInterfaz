@@ -2,14 +2,14 @@
   "records": [
     {
       "id": "47",
-      "sender": "Sauron",
-      "type": "Problem",
+      "user": "Sauron",
+      "subject": "Problem",
       "date": "10/10/2017"
     },
     {
       "id": "51",
-      "sender": "Gandalf",
-      "type": "Problem",
+      "user": "Gandalf",
+      "subject": "Problem",
       "date": "10/10/2017"
     }
   ],

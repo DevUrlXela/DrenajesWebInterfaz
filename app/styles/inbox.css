@@ -1,0 +1,7 @@
+.messages-table .from {
+  width: 20% !important;
+}
+
+.inbox-exp {
+  cursor: pointer;
+}

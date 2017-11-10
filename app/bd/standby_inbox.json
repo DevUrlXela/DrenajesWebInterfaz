@@ -2,104 +2,128 @@
   "records": [
     {
       "id": "1",
-      "sender": "Danerys Targaryen",
-      "type": "Problem",
+      "user": "Danerys Targaryen",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "2",
-      "sender": "Jon Snow",
-      "type": "Problem",
+      "user": "Jon Snow",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "3",
-      "sender": "Sansa Stark",
-      "type": "Problem",
+      "user": "Sansa Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "4",
-      "sender": "Aria Stark",
-      "type": "Problem",
+      "user": "Aria Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "5",
-      "sender": "Brandon Stark",
-      "type": "Problem",
+      "user": "Brandon Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "6",
-      "sender": "Rhaegar Targaryen",
-      "type": "Problem",
+      "user": "Rhaegar Targaryen",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "7",
-      "sender": "Cersei Lannister",
-      "type": "Problem",
+      "user": "Cersei Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "8",
-      "sender": "Tyrion Lannister",
-      "type": "Problem",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
       },
     {
       "id": "9",
-      "sender": "Danerys Targaryen",
-      "type": "Problem",
+      "user": "Danerys Targaryen",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "10",
-      "sender": "Jon Snow",
-      "type": "Problem",
+      "user": "Jon Snow",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "11",
-      "sender": "Sansa Stark",
-      "type": "Problem",
+      "user": "Sansa Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "12",
-      "sender": "Aria Stark",
-      "type": "Problem",
+      "user": "Aria Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "13",
-      "sender": "Brandon Stark",
-      "type": "Problem",
+      "user": "Brandon Stark",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "14",
-      "sender": "Rhaegar Targaryen",
-      "type": "Problem",
+      "user": "Rhaegar Targaryen",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "15",
-      "sender": "Cersei Lannister",
-      "type": "Problem",
+      "user": "Cersei Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     },
     {
       "id": "16",
-      "sender": "Tyrion Lannister",
-      "type": "Problem",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "17",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "18",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "19",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
+      "date": "10/10/2017"
+    },
+    {
+      "id": "20",
+      "user": "Tyrion Lannister",
+      "subject": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum",
       "date": "10/10/2017"
     }
   ],
   "metadata": {
-    "total_records": "16",
-    "records": "16",
+    "total_records": "58",
+    "records": "20",
     "pages": "1"
   }
 }

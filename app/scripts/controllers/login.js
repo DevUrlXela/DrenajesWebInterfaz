@@ -16,8 +16,6 @@ angular.module('drenajesWebInterfazApp')
     }, function errorCallback(response) {
       $scope.respuesta = 'Usuario o contraseña incorrectos';
     })
-
-
   }
 
 });
