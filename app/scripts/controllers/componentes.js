@@ -4,7 +4,7 @@ angular.module('drenajesWebInterfazApp')
   .controller('TopCtrl', function ($scope, $location, sesion, apiService) {
     $scope.nombre_usuario = sesion.getCookie().user;
     $scope.cerrar = function(){
-      apiService.get('/expedientes/user/logout/', sesion.getToken())
+      apiService.post('/expedientes/user/logout/', { "token": sesion.getToken() }, sesion.getToken())
       .then(function successCallback(response) {
         sesion.logout();
         $location.url('/login')
