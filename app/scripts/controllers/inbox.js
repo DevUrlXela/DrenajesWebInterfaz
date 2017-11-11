@@ -2,6 +2,7 @@
 
 angular.module('drenajesWebInterfazApp')
 .controller('InboxCtrl', function ($routeParams, $scope, $http, $location, sesion, apiService) {
+  $scope.rol = sesion.getRol();
   $scope.pag = $routeParams.pagina * 1;
   $scope.total_pags;
   $scope.records = [];

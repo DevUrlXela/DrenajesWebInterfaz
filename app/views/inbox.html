@@ -11,7 +11,7 @@
       <ul class="nav nav-messages margin-bottom-30">
         <li><a href="/#!/home/entrada/1" class="active">Bandeja de entrada</a></li>
         <li><a href="/#!/home/transferidos/1" class="">Transferidos</a></li>
-        <li><a href="/#!/home/finalizados/1" class="">Finalizados</a></li>
+        <li ng-if="rol === 'Director'"><a href="/#!/home/finalizados/1" class="">Finalizados</a></li>
       </ul>
     </aside>
     <div class="col-md-10">
