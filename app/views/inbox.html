@@ -9,28 +9,18 @@
   <div class="row">
     <aside class="col-md-2 fix-on-scroll">
       <ul class="nav nav-messages margin-bottom-30">
-        <li><a href="/#!/home/entrada/1" class="active"><span class="badge pull-right">{{standby_metadata.total_records}}</span> Bandeja de entrada</a></li>
-        <li><a href="/#!/home/transferidos/1" class=""><span class="badge pull-right">{{transferred_metadata.total_records}}</span> Transferidos</a></li>
-        <li><a href="/#!/home/finalizados/1" class=""><span class="badge pull-right">{{finish_metadata.total_records}}</span> Finalizados</a></li>
+        <li><a href="/#!/home/entrada/1" class="active">Bandeja de entrada</a></li>
+        <li><a href="/#!/home/transferidos/1" class="">Transferidos</a></li>
+        <li><a href="/#!/home/finalizados/1" class="">Finalizados</a></li>
       </ul>
     </aside>
     <div class="col-md-10">
       <div class="margin-bottom-15">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <i class="ti-check-box"></i> <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li class="divider"></li>
-            <li><a href="#" class="checkbox-menu read">Leídos</a></li>
-            <li><a href="#" class="checkbox-menu unread">No leídos</a></li>
-          </ul>
-        </div>
         <div class="pull-right">
-          <span class="margin-right-15"><b>1</b>–<b>50</b> de <b>15,737</b></span>
+          <span class="margin-right-15"><b>Página </b><b>{{pag}}</b> de <b>{{total_pags}}</b></span>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-primary"><i class="ti-angle-left"></i></button>
-            <button type="button" class="btn btn-primary"><i class="ti-angle-right"></i></button>
+            <button ng-click="previousPage()" type="button" class="btn btn-primary"><i class="ti-angle-left"></i></button>
+            <button ng-click="nextPage()" type="button" class="btn btn-primary"><i class="ti-angle-right"></i></button>
           </div>
         </div>
       </div>

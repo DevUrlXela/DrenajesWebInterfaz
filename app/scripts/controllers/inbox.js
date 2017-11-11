@@ -2,29 +2,51 @@
 
 angular.module('drenajesWebInterfazApp')
 .controller('InboxCtrl', function ($routeParams, $scope, $http, $location, sesion, apiService) {
-  var trayShowing = 0;
+  $scope.pag = $routeParams.pagina * 1;
+  $scope.total_pags;
   $scope.records = [];
-  $scope.standby_metadata = [];
-  $scope.transferred_metadata = [];
-  $scope.finish_metadata = [];
-  console.log($routeParams);
-  if($routeParams.bandeja === "entrada") {
-    apiService.get('/expedientes/expediente/inbox/' + $routeParams.pagina + '/', sesion.getToken()).then(response => {
-      $scope.records = response.data;
-      trayShowing = 0;
-    });
-  } else if ($routeParams.bandeja === "transferidos") {
-    $http.get('/bd/transferred_inbox.json').then(response => {
-      $scope.records = response.data.records;
-      $scope.transferred_metadata = response.data.metadata;
-      trayShowing = 1;
-    });
-  } else if ($routeParams.bandeja === "finalizados") {
-    $http.get('/bd/finish_inbox.json').then(response => {
-      $scope. records = response.data.records;
-      $scope.finish_metadata = response.data.metadata;
-      trayShowing = 2;
-    });
+
+  $scope.nextPage = function() {
+    if($scope.pag + 1 <= $scope.total_pags) {
+      if($routeParams.bandeja == "entrada") {
+        $location.path("/home/entrada/" + (++$scope.pag));
+      } else if($routeParams.bandeja == "transferidos"){
+        $location.path("/home/transferidos/" + (++$scope.pag));
+      } else if($routeParams.bandeja == "finalizados"){
+        $location.path("/home/finalizados/" + (++$scope.pag));
+      }
+    }
   }
 
+  $scope.previousPage = function() {
+    if($scope.pag - 1 >= 1)
+    if($routeParams.bandeja == "entrada") {
+      $location.path("/home/entrada/" + (--$scope.pag));
+    } else if($routeParams.bandeja == "transferidos"){
+      $location.path("/home/transferidos/" + (--$scope.pag));
+    } else if($routeParams.bandeja == "finalizados"){
+      $location.path("/home/finalizados/" + (--$scope.pag));
+    }
+  }
+
+  function fetchData() {
+    if($routeParams.bandeja === "entrada") {
+      apiService.get('/expedientes/expediente/inbox/' + $scope.pag + '/', sesion.getToken()).then(response => {
+        $scope.records = response.data.objects;
+        $scope.total_pags = response.data.meta.total;
+      });
+    } else if ($routeParams.bandeja === "transferidos") {
+      apiService.get('/expedientes/expediente/transferidos/' + $scope.pag + '/', sesion.getToken()).then(response => {
+        $scope.records = response.data.objects;
+        $scope.total_pags = response.data.meta.total;
+      });
+    } else if ($routeParams.bandeja === "finalizados") {
+      apiService.get('/expedientes/expediente/finalizados/' + $scope.pag + '/', sesion.getToken()).then(response => {
+        $scope.records = response.data.objects;
+        $scope.total_pags = response.data.meta.total;
+      });
+    }
+  }
+
+  fetchData();
 });
