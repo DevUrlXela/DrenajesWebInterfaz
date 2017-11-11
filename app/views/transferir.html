@@ -7,7 +7,7 @@
 
     <div class="col-md-8">
       <h1>Transferir</h1>
-      <p class="lead">Expediente no. {{no_expediente}}</p>
+      <p class="lead">Expediente no. {{id_exp}}</p>
     </div>
 
     <div class="col-md-4">
@@ -29,22 +29,21 @@
 
               <select class="multipleselect form-control" multiple>
                 <!-- Jefaturas proximamente  -->
-                <option value="BQ" data-subtitle="Administrator" data-left="<img src=''>" data-right="1">Bruno Q.</option>
-                <option value="SA" data-subtitle="Administrator" data-left="<img src=''>" data-right="2">Silvina A.</option>
-                <option value="JD" data-subtitle="User" data-left="<img src=''>" data-right="3">John Doe</option>
+                <option ng-repeat="user in usuarios" value="BQ" data-subtitle="{{user.rol}}" data-left="<img src=''>" data-right="{{usuarios.indexOf(user)+1}}">{{user.username}}</option>
+
               </select>
 
             </div> <!-- / form-group -->
 
             <div class="form-group">
               <label for="simplecolor">Razon:</label>
-              <input type="text" class="form-control" id="simplecolor" value="" />
+              <input ng-model="razon" type="text" class="form-control" id="simplecolor" value="" />
             </div>  <!-- / form-group -->
 
 
             <div class="form-group">
               <label for="simplecolor">Observaciones:</label>
-              <div class="wysiwyg-textarea"></div>
+              <textarea ng-model="observacion" class="form-control" rows="10"></textarea>
             </div>  <!-- / form-group -->
 
 
@@ -57,8 +56,8 @@
 
             <!-- Action buttons -->
             <div class="row">
-              <a href="inbox.php" class="btn btn-danger">Cancelar</a>
-              <a href="inbox.php" class="btn btn-primary pull-right">Enviar</a>
+              <a href="#" class="btn btn-danger">Cancelar</a>
+              <a ng-click="enviar()" class="btn btn-primary pull-right">Enviar</a>
             </div> <!-- / row Action buttons -->
 
           </div> <!-- / panel-body -->
