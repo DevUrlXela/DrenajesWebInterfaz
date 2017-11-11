@@ -37,10 +37,10 @@
       <table class="table messages-table table-hover">
         <tbody>
           <tr ng-repeat="record in records" ng-class="record.leido ? 'read' : 'unread'">
-            <td class="inbox-exp from"><div><a ng-href="/detalle-expediente/{{record.id}}">{{record.enviado}}</a></div></td>
-            <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-href="/detalle-expediente/{{record.id}}">{{record.id}}</a></div></td>
-            <td class="inbox-exp summary hidden-xs"><div><a ng-href="/detalle-expediente/{{record.id}}">{{record.observaciones}}</a></div></td>
-            <td class="inbox-exp date-time text-right"><a ng-href="/detalle-expediente/{{record.id}}">{{record.fecha_envio}}</a></td>
+            <td class="inbox-exp from"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.enviado}}</a></div></td>
+            <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.id}}</a></div></td>
+            <td class="inbox-exp summary hidden-xs"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.observaciones}}</a></div></td>
+            <td class="inbox-exp date-time text-right"><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.fecha_envio}}</a></td>
           </tr>
         </tbody>
       </table>

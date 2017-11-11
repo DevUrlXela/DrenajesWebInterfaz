@@ -55,8 +55,7 @@ angular
         controller: 'ErrorCtrl'
       })
       .otherwise({
-        redirectTo: '/404',
-        controller: 'ErrorCtrl'
+        redirectTo: '/home/entrada/1',
       })
   })
   .service('apiService', function($http) {
