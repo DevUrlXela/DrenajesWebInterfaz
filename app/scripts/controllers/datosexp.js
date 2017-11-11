@@ -5,13 +5,25 @@ angular.module('drenajesWebInterfazApp')
     .then(function successCallback(response) {
     })
 
+    apiService.get('/expedientes/expediente/permiso/' + $routeParams.id + '/', sesion.getToken())
+    .then(function successCallback(response) {
+      console.log(response.data)
+      $scope.autorizar = response.data.autorizar
+      $scope.modificar = response.data.modificar
+      $scope.transferir = response.data.transferir
+      $scope.confirmar_recibido = !response.data.confirmar_recibido
+      $scope.aceptar = response.data.aceptar
+    })
+
     apiService.get( '/expedientes/expediente/informacion/' + $routeParams.id + '/', sesion.getToken())
     .then(function successCallback(response) {
+      console.log(response.data)
       $scope.data = response.data
     })
 
     apiService.get( '/expedientes/requisito/expediente/' + $routeParams.id + '/informacion/' , sesion.getToken())
     .then(function successCallback(response) {
+        console.log(response.data)
       $scope.requisitos = response.data
     })
 
