@@ -24,7 +24,7 @@
 
                 <div class="col-md-4">
                   <label>Fecha de creacion:</label>
-                  <input ng-model="expediente.fecha" class="form-inline" type="date" required>
+                  <input ng-model="expediente.fecha" type="text" class="datepicker" data-date-format="dd/mm/yyyy">
                 </div>
               </div>
             </section>
@@ -77,7 +77,7 @@
                        <thead>
                          <tr style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
                            <th class="col-md-6">Requisito</th>
-                           <th class="col-md-3">Necesario</th>
+
                            <th class="col-md-3">Cumplido</th>
                          </tr>
                        </thead>
@@ -85,12 +85,6 @@
 
                          <tr ng-repeat='requisito in requisitos'style="width:100%; display: inline-table; height:60px; table-layout: fixed;">
                            <td class="col-md-6">{{requisito.descripcion}}</td>
-                           <td class="col-md-3">
-                             <div class="checkbox">
-                              <input ng-model="requisito.necesario" type="checkbox" value="" class="labelauty" ng-attr-id="{{'cbn' + requisitos.indexOf(requisito)}}" style="display: none;">
-                              <label ng-attr-for = "{{'cbn' + requisitos.indexOf(requisito)}}"><span class="labelauty-unchecked-image"></span><span class="labelauty-checked-image"></span></label>
-                             </div>
-                           </td>
                            <td class="col-md-3">
                              <div class="checkbox">
                               <input ng-model="requisito.cumple" type="checkbox" value="" class="labelauty" ng-attr-id="{{'cb' + requisitos.indexOf(requisito)}}" style="display: none;">
@@ -140,7 +134,7 @@
               <div class="col-md-4"></div>
               <div class="col-md-6">
                 <div class="col-xs-6">
-                  <button style="width: 100px" class="btn btn-primary">Crear</button>
+                  <button ng-click="crear_exp()"style="width: 100px" class="btn btn-primary">Crear</button>
                 </div>
                 <div class="col-xs-6">
                   <button href="#" style="width: 100px" class="btn btn-danger">Cancelar</button>
@@ -150,10 +144,14 @@
           </section>
         </div>
         <!-- Fin botones -->
+        <div class="well well-sm">
+                    {{alerta}}
+        </div>
     </div>
   </div>
 
 
   <cm-footer></cm-footer>
+  <script src="/src/js/sugarrush.forms.js"></script>
 </main>
 <cm-scrolltop></cm-scrolltop>
