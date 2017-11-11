@@ -1,9 +1,26 @@
 angular.module('drenajesWebInterfazApp')
   .controller('ConsultaCtrl', function ($scope, sesion, apiService) {
-    // $scope.expediente = {};
-    //apiService.crear('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDMWY9z1PPeX-6adeIMRZBwk87ilFeH3bw',{"email" : "alguien@gmail.com","password" : "12345678","returnSecureToken": true});
-    // apiService.get('expedientes/estado/expediente/'+id_expediente+'/estados', sesion.getToken())
-    // .then(function(response){
-    // }
-    // )
-})  
+    $scope.id_expediente = ""
+    $scope.busqueda=function(){
+      if ($scope.id_expediente != '') {
+        apiService.get('/expedientes/expediente/busqueda/'+$scope.id_expediente+'/',sesion.getToken())
+        .then(function successCallback(response) {
+          $scope.estado = response.data.estado;
+          $scope.tipo = response.data.tipo;
+          $scope.remitente = response.data.remitente;
+          $scope.firma = response.data.firma;
+          $scope.fecha_ing = response.data.fecha_ingreso;
+          console.log($scope.fecha_ing);
+        }, function errorCallback(response) {
+          swal({
+            title: "Advertencia",
+            text: "Expediente no encontrado",
+            type: "error"
+          })
+        })
+
+      }
+
+    }
+
+})

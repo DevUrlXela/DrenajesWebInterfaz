@@ -17,8 +17,8 @@
       <div class="col-md-4">
         <div class="form-group">
           <div class="input-group">
-            <span class="input-group-addon"><a class="ti-search" href="#"></a></span>
-            <input type="url" class="form-control" id="exampleInputEmail1">
+            <span ng-click = "busqueda()" class="input-group-addon"><a class="ti-search"></a></span>
+            <input ng-model="id_expediente" type="number" class="form-control" id="exampleInputEmail1">
           </div>
         </div>
       </div>
@@ -47,10 +47,10 @@
           <div class="panel-body">
             <p>
 
-              <a  target="_blank" class="btn btn-primary btn-sm">Estado 1</a>
-              <a  target="_blank" class="btn btn-primary btn-sm">Estado 2</a>
-              <a  target="_blank" class="btn btn-default btm-sm">Estado 3</a>
-              <a  target="_blank" class="btn btn-primary btn-sm">Estado 4</a>
+              <a  target="_blank" class="btn btn-primary btn-sm">En Espera</a>
+              <a  target="_blank" class="btn btn-primary btn-sm">En Proceso</a>
+              <a  target="_blank" class="btn btn-default btm-sm">Finalizado</a>
+
             </p>
 
           </div>
@@ -66,19 +66,19 @@
             </header>
             <div class="panel-body">
               <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Tipo: </a>
-              <a href="#" class="btn btn-success alert-demo-4" style= "width:300px"</st>Tipo de Expediente </a>
+              <a  class="btn btn-success alert-demo-4" style= "width:300px"</st> {{tipo}} </a>
             </div>
             <div class="panel-body">
               <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Remitente: </a>
-              <a href="#" class="btn btn-success alert-demo-4"style= "width:300px">Jefatura 1</a>
+              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{remitente}}</a>
             </div>
             <div class="panel-body">
               <a  target="_blank" class="btn btn-default btm-sm" style="width:165px">Fecha de Ingreso: </a>
-              <a href="#" class="btn btn-success alert-demo-4"style= "width:300px">30/02/2017</a>
+              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{fecha_ing}}</a>
             </div>
             <div class="panel-body">
               <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Firma: </a>
-              <a href="#" class="btn btn-success alert-demo-4"style= "width:300px">Abuelo</a>
+              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{firma}}</a>
             </div>
           </section> <!-- / section -->
 
