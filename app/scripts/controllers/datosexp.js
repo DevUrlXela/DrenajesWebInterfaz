@@ -1,6 +1,7 @@
 angular.module('drenajesWebInterfazApp')
   .controller('DetalleCtrl', function ($scope, $route, $routeParams, apiService, sesion) {
 
+    $scope.id= $routeParams.id
     apiService.post('/expedientes/expediente/' + $routeParams.id + '/leido/', { "token": sesion.getToken() }, sesion.getToken())
     .then(function successCallback(response) {
     })
@@ -56,5 +57,72 @@ angular.module('drenajesWebInterfazApp')
         })
       }
     }
+
+    $scope.autorizar_fun = function(){
+      apiService.get('/expedientes/expediente/' + $routeParams.id + '/autorizar/', sesion.getToken())
+        .then(function successCallback(response) {
+          swal({
+            title: "Expediente autorizado",
+            type: "success"
+            },
+            function(){
+              location.reload();
+            });
+        },
+        function errorCallback(response) {
+          swal({
+            title: "No tienes permisos",
+            type: "error"
+            },
+            function(){
+              location.reload();
+            });
+        })
+    }
+
+    $scope.aceptar_fun = function(){
+      apiService.get('/expedientes/expediente/' + $routeParams.id + '/aceptar/', sesion.getToken())
+        .then(function successCallback(response) {
+          swal({
+            title: "Expediente aceptado",
+            type: "success"
+            },
+            function(){
+              location.reload();
+            });
+        },
+        function errorCallback(response) {
+          swal({
+            title: "No tienes permisos",
+            type: "error"
+            },
+            function(){
+              location.reload();
+            });
+        })
+    }
+
+    $scope.confirmar_fun = function(){
+      apiService.get('/expedientes/expediente/' + $routeParams.id + '/confirmar/', sesion.getToken())
+        .then(function successCallback(response) {
+          swal({
+            title: "Expediente recibido confirmado",
+            type: "success"
+            },
+            function(){
+              location.reload();
+            });
+        },
+        function errorCallback(response) {
+          swal({
+            title: "No tienes permisos",
+            type: "error"
+            },
+            function(){
+              location.reload();
+            });
+        })
+    }
+
 
   });
