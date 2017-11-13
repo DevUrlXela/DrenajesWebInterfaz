@@ -27,12 +27,11 @@
             <div class="form-group">
               <label>Para:</label>
 
-              <select class="multipleselect form-control" multiple>
+              <select ng-model="enviado" class="form-control" >
                 <!-- Jefaturas proximamente  -->
-                <option ng-repeat="user in usuarios" value="BQ" data-subtitle="{{user.rol}}" data-left="<img src=''>" data-right="{{usuarios.indexOf(user)+1}}">{{user.username}}</option>
+                <option ng-repeat="user in usuarios" value={{user.id}} data-left="<img src=''>" >{{user.rol + ': ' +user.usuario}}</option>
 
               </select>
-
             </div> <!-- / form-group -->
 
             <div class="form-group">
