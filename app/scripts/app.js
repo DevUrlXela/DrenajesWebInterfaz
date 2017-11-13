@@ -54,6 +54,10 @@ angular
         templateUrl: 'views/blank.html',
         controller: 'ErrorCtrl'
       })
+      .when('/reporte', {
+        templateUrl: 'views/reporte.html',
+        controller: 'ReporteCtrl'
+      })
       .otherwise({
         redirectTo: '/home/entrada/1',
       })

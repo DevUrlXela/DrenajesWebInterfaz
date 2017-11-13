@@ -18,25 +18,10 @@
         <div class="form-group">
           <div class="input-group">
             <span ng-click = "busqueda()" class="input-group-addon"><a class="ti-search"></a></span>
-            <input ng-model="id_expediente" type="number" class="form-control" id="exampleInputEmail1">
+            <input ng-model="id_expediente" type="number" class="form-control" id="exampleInputEmai">
           </div>
         </div>
       </div>
-
-
-
-
-
-
-      <!--div class="col-md-4">
-
-        <ol class="breadcrumb pull-right no-margin-bottom">
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">UI / UX</a></li>
-          <li class="active">Alerts</li>
-        </ol>
-
-      </div-->
     </section> <!-- / PAGE TITLE -->
 
     <div class="container-fluid">
@@ -45,14 +30,11 @@
         <!-- <p class="lead">Need your user to notice something? This is the way to do it</p> -->
         <section class="panel">
           <div class="panel-body">
-            <p>
-
-              <a  target="_blank" class="btn btn-primary btn-sm">En Espera</a>
-              <a  target="_blank" class="btn btn-primary btn-sm">En Proceso</a>
-              <a  target="_blank" class="btn btn-default btm-sm">Finalizado</a>
-
-            </p>
-
+              <ul class="nav nav-pills nav-justified">
+                <li class="{{estados(0)}}" > <a>En Espera</a> </li>
+                <li class="{{estados(1)}}"> <a>En Proceso</a> </li>
+                <li class="{{estados(2)}}"> <a>Finalizado</a> </li>
+              </ul>
           </div>
         </section>
 
@@ -65,36 +47,22 @@
               <!-- <h4 class="panel-title">Bootstrap Notify</h4> -->
             </header>
             <div class="panel-body">
-              <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Tipo: </a>
-              <a  class="btn btn-success alert-demo-4" style= "width:300px"</st> {{tipo}} </a>
+              <a  target="_blank" class="btn btn-info"style="width:165px">Tipo: </a>
+              <a  class="panel" > {{tipo}} </a>
             </div>
             <div class="panel-body">
-              <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Remitente: </a>
-              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{remitente}}</a>
+              <a  target="_blank" class="btn btn-info"style="width:165px">Remitente: </a>
+              <a  class="panel">{{remitente}}</a>
             </div>
             <div class="panel-body">
-              <a  target="_blank" class="btn btn-default btm-sm" style="width:165px">Fecha de Ingreso: </a>
-              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{fecha_ing}}</a>
+              <a  target="_blank" class="btn btn-info" style="width:165px">Fecha de Ingreso: </a>
+              <a  class="panel">{{fecha_ing}}</a>
             </div>
             <div class="panel-body">
-              <a  target="_blank" class="btn btn-default btm-sm"style="width:165px">Firma: </a>
-              <a  class="btn btn-success alert-demo-4"style= "width:300px">{{firma}}</a>
+              <a  target="_blank" class="btn btn-info"style="width:165px">Firma: </a>
+              <a  class="panel">{{firma}}</a>
             </div>
           </section> <!-- / section -->
-
-          <!--section class="panel">
-            <header class="panel-heading">
-              <h4 class="panel-title">Sweet Alerts</h4>
-            </header>
-            <div class="panel-body">
-              <a href="#" class="btn btn-primary alert-demo-6">Message</a>
-              <a href="#" class="btn btn-primary alert-demo-7">2 line message</a>
-              <a href="#" class="btn btn-success alert-demo-8">Success message</a>
-              <a href="#" class="btn btn-primary alert-demo-9">Complex alert box</a>
-              <a href="#" class="btn btn-primary alert-demo-10">Prompt</a>
-            </div>
-          </section--> <!-- / section -->
-
 
 
         </div> <!-- / col-md-12 -->
