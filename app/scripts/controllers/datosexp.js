@@ -14,6 +14,10 @@ angular.module('drenajesWebInterfazApp')
       $scope.transferir = response.data.transferir
       $scope.confirmar_recibido = !response.data.confirmar_recibido
       $scope.aceptar = response.data.aceptar
+      if($scope.aceptar == 1){
+        $scope.autorizar = 0
+        $scope.confirmar_recibido = 0
+      }
     })
 
     apiService.get( '/expedientes/expediente/informacion/' + $routeParams.id + '/', sesion.getToken())

@@ -60,7 +60,7 @@ angular
   })
   .service('apiService', function($http) {
     //var apiURL = '';
-    var apiURL = 'http://localhost:8000';
+    var apiURL = 'http://192.168.43.176:8000';
 
     var get = function(endpoint, token) {
       if(token != undefined){

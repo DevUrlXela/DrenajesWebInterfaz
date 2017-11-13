@@ -26,20 +26,27 @@ angular.module('drenajesWebInterfazApp')
             return null
           }
 
-        apiService.post('/expedientes/expediente/nuevo/', {
+        apiService.post('/expedientes/expediente/crear/', {
           "tipo":$scope.expediente.tipo,
-          "fecha_entrada":$scope.expediente.fecha,
           "remitente":$scope.expediente.remitente,
-          "folio":$scope.expediente.folio,
+          "numero_folios":$scope.expediente.folio,
           "firma":$scope.expediente.firma
           }, sesion.getToken())
         .then(function successCallback(response) {
+          console.log($scope.expediente)
           for(i=0;i<$scope.requisitos.length;i+=1){
             apiService.post('/expedientes/requisito/expediente/' + response.data.id + '/crear/',{"requisito":$scope.requisitos[i].descripcion},sesion.getToken())
             .then(function successCallback(response){
-              console.log(funciona)
+              console.log('funciona')
             })
           }
+          swal({
+            title: "Expediente Creado",
+            type: "success"
+            },
+            function(){
+              window.location = '/#!/';
+            });
         }, function errorCallback(response) {
 
         })
