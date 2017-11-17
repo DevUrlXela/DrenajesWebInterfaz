@@ -29,16 +29,14 @@
 
               <select ng-model="enviado" class="form-control" >
                 <!-- Jefaturas proximamente  -->
-                <option ng-repeat="user in usuarios" value={{user.id}} data-left="<img src=''>" >{{user.rol + ': ' +user.usuario}}</option>
+                <option ng-repeat="user in usuarios" value="{{user.id}}" data-left="<img src=''>" >{{user.rol + ': ' +user.usuario}}</option>
 
               </select>
             </div> <!-- / form-group -->
-
             <div class="form-group">
               <label for="simplecolor">Razon:</label>
               <input ng-model="razon" type="text" class="form-control" id="simplecolor" value="" />
             </div>  <!-- / form-group -->
-
 
             <div class="form-group">
               <label for="simplecolor">Observaciones:</label>
