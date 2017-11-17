@@ -18,6 +18,11 @@ angular.module('drenajesWebInterfazApp')
             text: "Expediente no encontrado",
             type: "error"
           })
+          $scope.estado = '';
+          $scope.tipo = '';
+          $scope.remitente = '';
+          $scope.firma = '';
+          $scope.fecha_ing = '';
         })
 
       }

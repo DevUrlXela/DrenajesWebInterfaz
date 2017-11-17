@@ -16,9 +16,11 @@
 
       <div class="col-md-4">
         <div class="form-group">
-          <div class="input-group">
+          <div class="input-group" >
             <span ng-click = "busqueda()" class="input-group-addon"><a class="ti-search"></a></span>
-            <input ng-model="id_expediente" type="number" class="form-control" id="exampleInputEmai">
+            <form ng-submit = "busqueda()">
+              <input ng-model="id_expediente" type="number" class="form-control" placeholder="Número de Expediente"id="exampleInputEmai">
+            </form>
           </div>
         </div>
       </div>
