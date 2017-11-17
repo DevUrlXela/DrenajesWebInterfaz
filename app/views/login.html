@@ -11,7 +11,7 @@
               <p>Drenajes y Alcantarillados Xela</p>
             </header>
             <div class="panel-body">
-              <form>
+              <form ng-submit="logearse()">
                 <div class="form-group">
                   <label for="username">Nombre de Usuario</label>
                   <input ng-model="user" type="text" class="form-control" id="username" placeholder="Usuario">
@@ -22,15 +22,16 @@
                   <input ng-model="password" type="password" class="form-control" id="password" placeholder="Contraseña">
                 </div>
 
-                <div class="form-group text-center">
-                  <a ng-click="logearse()" class="btn-login btn btn-primary">Entrar<i class="ti-unlock"></i><i class="ti-lock"></i></a>
-                </div>
+
+                  <div class="form-group text-center">
+                    <a ng-click="logearse()" class="btn-login btn btn-primary">Entrar<i class="ti-unlock"></i><i class="ti-lock"></i></a>
+                  </div>
 
                 <!--hr>
                 <div class="social-login">
                   <p class="text-center">Entrar con</p>
                   <p class="text-center"><a href="dashboard.html"><i class="ti-facebook"></i></a> <a href="dashboard.html"><i class="ti-google"></i></a> <a href="dashboard.html"><i class="ti-twitter"></i></a> </p>
-                </div>
+                </div-->
               </form>
               <hr-->
               <div class="register-now">
