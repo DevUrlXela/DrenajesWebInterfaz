@@ -17,6 +17,12 @@ angular.module('drenajesWebInterfazApp')
       if($scope.aceptar == 1){
         $scope.autorizar = 0
         $scope.confirmar_recibido = 0
+        $scope.transferir = 0
+      }
+      if($scope.confirmar_recibido == 1){
+        $scope.autorizar = 0
+        $scope.transferir = 0
+        $scope.modificar = 0
       }
     })
 

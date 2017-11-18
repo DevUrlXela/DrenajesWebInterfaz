@@ -26,6 +26,7 @@
         </div>
       </div>
 
+
       <div class="col-md-6">
         <section class="panel">
             <div class="panel-body">
@@ -45,6 +46,14 @@
               </div>
             </div>
         </section>
+      </div>
+      
+      <div class="col-xs-3">
+        <div class="panel-body  flex-last">
+          <div class="col-xs-6" style="height: 70px; ">
+            <a href="/#!/" class="btn btn-deafult">Regresar a bandeja</a>
+          </div>
+        </div>
       </div>
 
       <div class="col-md-6">
@@ -72,6 +81,13 @@
 
               </tbody>
             </table>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a  ng-href="/#!/modificar-expediente/{{id}}#mod_requisitos" class="btn btn-warning">Modificar Requisitos</a>
+              </div>
+            </div>
           </div>
         </div>
         </section>
@@ -190,26 +206,42 @@
         <section class="panel">
           <div class="panel-body">
 
-          <div class="col-xs-3">
+          <div ng-show="confirmar_recibido" class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a ng-click="confirmar_fun()" ng-show="confirmar_recibido" class="btn btn-success">Confirmar Recibido</a>
+                <a ng-click="confirmar_fun()"  class="btn btn-success">Confirmar Recibido</a>
               </div>
             </div>
           </div>
 
-          <div class="col-xs-3">
+          <div ng-show="aceptar" class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a ng-click="aceptar_fun()"ng-show="aceptar" class="btn btn-success">Aceptar Expediente</a>
+                <a ng-click="aceptar_fun()"  class="btn btn-success">Aceptar Expediente</a>
               </div>
             </div>
           </div>
 
-          <div class="col-xs-3">
+          <div ng-show="autorizar" class="col-xs-3">
             <div class="panel-body flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a  ng-click="autorizar_fun()" ng-show="autorizar" class="btn btn-success">Autorizar</a>
+                <a  ng-click="autorizar_fun()"  class="btn btn-success">Autorizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div ng-show="modificar" class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a  ng-href="/#!/modificar-expediente/{{id}}" class="btn btn-warning">Modificar</a>
+              </div>
+            </div>
+          </div>
+
+          <div ng-show="transferir" class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a ng-href="/#!/transferir/{{id}}" class="btn btn-primary">Transferir</a>
               </div>
             </div>
           </div>
@@ -217,23 +249,7 @@
           <div class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a  ng-href="/#!/modificar-expediente/{{id}}" ng-show="modificar" class="btn btn-warning">Modificar</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-3">
-            <div class="panel-body  flex-last">
-              <div class="col-xs-6" style="height: 70px; ">
-                <a ng-href="/#!/transferir/{{id}}" ng-show="transferir" class="btn btn-primary">Transferir</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-3">
-            <div class="panel-body  flex-last">
-              <div class="col-xs-6" style="height: 70px; ">
-                <a href="/#!/" class="btn btn-deafult">Cancelar</a>
+                <a href="/#!/" class="btn btn-deafult">Regresar a bandeja</a>
               </div>
             </div>
           </div>

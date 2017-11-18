@@ -6,6 +6,7 @@ angular.module('drenajesWebInterfazApp')
   $scope.pag = $routeParams.pagina * 1;
   $scope.total_pags;
   $scope.records = [];
+  $scope.noleidos;
 
   $scope.nextPage = function() {
     if($scope.pag + 1 <= $scope.total_pags) {
@@ -47,6 +48,11 @@ angular.module('drenajesWebInterfazApp')
         $scope.total_pags = response.data.meta.total;
       });
     }
+
+    apiService.get('/expedientes/expediente/noleidos/', sesion.getToken() )
+    .then(function successCallback(response) {
+      $scope.noleidos = response.data.numero;
+    })
   }
 
   fetchData();
