@@ -57,6 +57,7 @@ angular
       .when('/resultados/busqueda/:params/:pag', {
         templateUrl: 'views/busqueda.html',
         controller: 'BusquedaCtrl'
+      })
       .when('/reporte', {
         templateUrl: 'views/reporte.html',
         controller: 'ReporteCtrl'
@@ -66,7 +67,7 @@ angular
       })
   })
   .service('apiService', function($http) {
-    var apiURL = 'http://localhost:8000';
+    var apiURL = 'http://192.168.1.17:8000';
 
     var get = function(endpoint, token) {
       if(token != undefined){
