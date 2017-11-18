@@ -2,13 +2,13 @@ angular.module('drenajesWebInterfazApp')
   .controller('TransCtrl', function ($scope, $routeParams, $location,apiService,sesion) {
     $scope.id_exp = $routeParams.id
     $scope.razon = ''
-    $scope.observacion = 'abcdddd'
+    $scope.observacion = ''
     $scope.enviado = '0'
 
     apiService.get('/expedientes/rol/usuarios/', sesion.getToken())
     .then(function successCallback(response){
        user_temp = response.data
-       for(i = 0; i<user_temp.length;i=+1){
+       for(var i = 0; i<user_temp.length;i=i+1){
          if(user_temp[i].id == sesion.getId()){
            user_temp.splice(i,1)
          }

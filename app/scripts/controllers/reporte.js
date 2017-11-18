@@ -9,7 +9,7 @@ angular.module('drenajesWebInterfazApp')
       $scope.tipo = true
       $scope.completado = true
       $scope.fecha_finalizacion = true
-      $scope.estado = '2'
+      $scope.estado = '1'
       $scope.mostrar = false
 
       $scope.generar = function(){
@@ -18,20 +18,26 @@ angular.module('drenajesWebInterfazApp')
           d1 = new Date(d1[2],d1[1]-1,d1[0])
           d2 = new Date(d2[2],d2[1]-1,d2[0])
           if(d2 >= d1){
-            apiService.post('/expedientes/reporte/',
-            { 'completado_r': $scope.completado,
-              'fecha_entrada_r': $scope.fecha_entrada,
-              'fecha_fin': $scope.fecha_fin,
-              'fecha_finalizacion_r':$scope.fecha_finalizacion,
-              'fecha_inicio':$scope.fecha_inicio,
-              'id':'1',
-              'numero_folios_r':$scope.folio,
-              'remitente_r':$scope.remitente,
-              'tipo_r':$scope.tipo,
-              'estado_r':$scope.estado }, sesion.getToken())
+            apiService.post('/expedientes/expediente/reporte/',
+            { 'completado': $scope.completado,
+              'fecha_entrada': $scope.fecha_entrada,
+              'fecha_inicio': d1.getFullYear() + '-' + (d1.getMonth()+1) + '-' + d1.getDate(),
+              'fecha_fin': d2.getFullYear() + '-' + (d2.getMonth()+1) + '-' + d2.getDate(),
+              'fecha_finalizacion':$scope.fecha_finalizacion,
+              'numero_folios':$scope.folio,
+              'remitente':$scope.remitente,
+              'tipo':$scope.tipo,
+              'estado':$scope.estado }, sesion.getToken())
             .then(function successCallback(response){
-              $scope.urlexcel = response.data.urlexcel
-              $scope.urlpdf = response.data.urlpdf
+              // var file = new Blob([response.data], {type: 'application/ms-excel;charset=utf-8'});
+              // console.log(response.data)
+              // var link = document.createElement('a'); //create link download file
+              // link.href = window.URL.createObjectURL(file); // set url for link download
+              // link.setAttribute('download', 'reporte.csv'); //set attribute for link created
+              // document.body.appendChild(link);
+              // link.click();
+              // document.body.removeChild(link);
+              $scope.urlexcel = response.data.url
               $scope.reporte = true
             })
           }
