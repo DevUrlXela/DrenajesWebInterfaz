@@ -33,24 +33,24 @@ angular.module('drenajesWebInterfazApp')
 
   function fetchData() {
     if($routeParams.bandeja === "entrada") {
-      apiService.get('/expedientes/expediente/inbox/' + $scope.pag + '/', sesion.getToken()).then(response => {
+      apiService.get('/expedientes/expediente/inbox/' + $scope.pag + '/', sesion.getToken()).then(function(response){
         $scope.records = response.data.objects;
         $scope.total_pags = response.data.meta.total;
       });
     } else if ($routeParams.bandeja === "transferidos") {
-      apiService.get('/expedientes/expediente/transferidos/' + $scope.pag + '/', sesion.getToken()).then(response => {
+      apiService.get('/expedientes/expediente/transferidos/' + $scope.pag + '/', sesion.getToken()).then(function(response){
         $scope.records = response.data.objects;
         $scope.total_pags = response.data.meta.total;
       });
     } else if ($routeParams.bandeja === "finalizados") {
-      apiService.get('/expedientes/expediente/finalizados/' + $scope.pag + '/', sesion.getToken()).then(response => {
+      apiService.get('/expedientes/expediente/finalizados/' + $scope.pag + '/', sesion.getToken()).then(function(response){
         $scope.records = response.data.objects;
         $scope.total_pags = response.data.meta.total;
       });
     }
 
     apiService.get('/expedientes/expediente/noleidos/', sesion.getToken() )
-    .then(function successCallback(response) {
+    .then(function(response){
       $scope.noleidos = response.data.numero;
     })
   }
