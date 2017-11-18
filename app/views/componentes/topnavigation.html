@@ -31,13 +31,14 @@
       <!-- start of SEARCH BLOCK -->
       <div class="navbar-form navbar-left navbar-search-block">
         <div class="search-field-container">
-          <input type="text" placeholder="Busqueda" class="search-field">
+          <form ng-submit="search()">
+            <input id="top-search" ng-model="busqueda" type="text" placeholder="Busqueda" class="search-field">
+          </form>
         </div>
       </div>
-
       <ul class="nav navbar-nav">
         <li>
-            <a href="#"><i class="ti-search"></i></a>
+            <a ng-click="search()" href=""><i class="ti-search"></i></a>
         </li>
       </ul>
       <!-- end of SEARCH BLOCK -->

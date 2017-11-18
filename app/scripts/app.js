@@ -54,12 +54,15 @@ angular
         templateUrl: 'views/blank.html',
         controller: 'ErrorCtrl'
       })
+      .when('/resultados/busqueda/:params/:pag', {
+        templateUrl: 'views/busqueda.html',
+        controller: 'BusquedaCtrl'
+      })
       .otherwise({
         redirectTo: '/home/entrada/1',
       })
   })
   .service('apiService', function($http) {
-    //var apiURL = '';
     var apiURL = 'http://localhost:8000';
 
     var get = function(endpoint, token) {

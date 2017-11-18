@@ -1,0 +1,38 @@
+<cm-sidebar></cm-sidebar>
+<main id="playground">
+  <cm-topnavigation></cm-topnavigation>
+    <div ng-if="records.length > 0">
+      <section id="page-title" class="row">
+        <div class="col-md-12">
+          <h1>Resultados</h1>
+        </div>
+      </section>
+      <div class="container-fluid white-bg">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="margin-bottom-15">
+              <div class="pull-right">
+                <span class="margin-right-15"><b>Página </b><b>{{pag}}</b> de <b>{{total_pags}}</b></span>
+                <div class="btn-group" role="group">
+                  <button ng-click="previousPage()" type="button" class="btn btn-primary"><i class="ti-angle-left"></i></button>
+                  <button ng-click="nextPage()" type="button" class="btn btn-primary"><i class="ti-angle-right"></i></button>
+                </div>
+              </div>
+            </div>
+            <table class="table messages-table table-hover">
+              <tbody>
+                <tr ng-repeat="record in records">
+                  <td class="inbox-exp from"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.firma}}</a></div></td>
+                  <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.remitente}}</a></div></td>
+                  <td class="inbox-exp summary hidden-xs"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.tipo}}</a></div></td>
+                  <td class="inbox-exp date-time text-right"><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.fecha_ingreso}}</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  <cm-footer></cm-footer>
+</main>
+<cm-scrolltop></cm-scrolltop>
