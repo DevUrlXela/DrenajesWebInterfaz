@@ -57,6 +57,9 @@ angular
       .when('/resultados/busqueda/:params/:pag', {
         templateUrl: 'views/busqueda.html',
         controller: 'BusquedaCtrl'
+      .when('/reporte', {
+        templateUrl: 'views/reporte.html',
+        controller: 'ReporteCtrl'
       })
       .otherwise({
         redirectTo: '/home/entrada/1',

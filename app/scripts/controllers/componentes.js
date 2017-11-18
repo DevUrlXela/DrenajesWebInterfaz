@@ -25,10 +25,10 @@ angular.module('drenajesWebInterfazApp')
 
   })
   .controller('SidebarCtrl', function ($scope, sesion) {
-      if(sesion.getRol() == "secretaria"){
+      if(sesion.getRol() == "Secretaria"){
         $scope.esSecretaria = true
       }
-      else if(sesion.getRol() == "director"){
+      else if(sesion.getRol() == "Director"){
         $scope.esDirector = true
       }
 

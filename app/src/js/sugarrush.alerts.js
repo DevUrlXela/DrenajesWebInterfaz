@@ -95,11 +95,6 @@ jQuery(document).ready(function() {
         swal("Good job!", "You clicked the button!", "success")
     });
 
-    jQuery('.alert-demo-9').on('click', function(e) {
-        e.preventDefault();
-        swal({   title: "Are you sure?",   text: "You will not be able to recover this imaginary file!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   cancelButtonText: "No, cancel plx!",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {     swal("Deleted!", "Your imaginary file has been deleted.", "success");   } else {     swal("Cancelled", "Your imaginary file is safe :)", "error");   } });
-    });
-
     jQuery('.alert-demo-10').on('click', function(e) {
         e.preventDefault();
         swal({

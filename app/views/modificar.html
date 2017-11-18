@@ -14,8 +14,8 @@
             <section class="panel">
               <div class="panel-body">
                 <div class="col-md-4">
-                  <label> ID:</label>
-                  <input ng-model="expediente.id" class="form-inline"type="text" >
+                  <label> ID: {{expediente.id}}</label>
+
                 </div>
 
                 <div class="col-md-4">
@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="col-md-4">
-                   <label>Fecha:</label>
-                  <input ng-model="expediente.fecha" type="text" class="datepicker" data-date-format="dd/mm/yyyy">
+                   <label>Fecha: <span> {{expediente.fecha}} </span></label>
+
                   <!-- <label>Fecha: <span>  17/10/2017</span></label> -->
                 </div>
               </div>
@@ -65,7 +65,7 @@
       </form>
 
       <!-- Inicio Requisitos-->
-      <form action="">
+      <form name="mod_requisitos" action="">
         <div class="col-md-12">
           <section class="panel">
             <div class="panel-body">
@@ -110,14 +110,14 @@
                 </header>
                 <div class="panel-body">
                     <label for="">Descripcion:</label>
-                    <input ng-model="descripcion" class="form-control"type="text">
+                    <input ng-model="descripcion" placeholder="Nuevo requisito" class="form-control"type="text">
                     <div class="checkbox">
                       <label>Cumple</label>
                      <input ng-model="cumple" type="checkbox" class="labelauty" id="10" style="display: none;">
                      <label for="10"><span class="labelauty-unchecked-image"></span><span class="labelauty-checked-image"></span></label>
                     </div>
                     <div class="col-xs-6">
-                      <button ng-click="agregar_req()"align="center" class="btn btn-primary">Crear</button>
+                      <a ng-click="agregar_req()"align="center" class="btn btn-primary">Crear</a>
                     </div>
                 </div>
 
@@ -134,10 +134,10 @@
             <div class="col-md-4"></div>
               <div class="col-md-6">
                 <div class="col-xs-6">
-                  <button style="width: 100px" class="btn btn-primary">Modificar</button>
+                  <a ng-click="modificar_exp()"style="width: 100px" class="btn btn-primary">Modificar</a>
                 </div>
                 <div class="col-xs-6">
-                  <button style="width: 100px"class="btn btn-danger">Cancelar</button>
+                  <a ng-href="/#!/detalle-expediente/{{id}}"style="width: 100px"class="btn btn-danger">Cancelar</a>
                 </div>
               </div>
             </div>

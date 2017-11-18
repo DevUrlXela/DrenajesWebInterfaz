@@ -64,14 +64,21 @@
               <tbody style="overflow-y: scroll; height: 110px; width: 100%; position: absolute;">
 
                 <tr ng-repeat="requisito in requisitos" style="width:100%; display: inline-table; height:30px; table-layout: fixed;">
-                  <td> {{requisito.fields.requisito}}</td>
-                  <td ng-show="requisito.fields.cumplido">Si </td>
-                  <td ng-show="!requisito.fields.cumplido">No </td>
+                  <td> {{requisito.requisito}}</td>
+                  <td ng-show="requisito.cumplido">Si </td>
+                  <td ng-show="!requisito.cumplido">No </td>
                 </tr>
 
 
               </tbody>
             </table>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a  ng-href="/#!/modificar-expediente/{{id}}#mod_requisitos" class="btn btn-warning">Modificar Requisitos</a>
+              </div>
+            </div>
           </div>
         </div>
         </section>
@@ -174,7 +181,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="panel-body">
-                    <button ng-click="crear_obs()"class="btn btn-primary ">Agregar observacion</button>
+                    <a ng-click="crear_obs()"class="btn btn-primary ">Agregar observacion</a>
                   </div>
 
                 </div>
@@ -189,41 +196,47 @@
       <div class="col-md-12">
         <section class="panel">
           <div class="panel-body">
-            <div class="col-xs-3">
-              <div class="panel-body  flex-last">
-                <div class="col-xs-6" style="height: 70px; ">
-                  <a ng-show="confirmar_recibido" class="btn btn-success">Confirmar Recibido</a>
-                </div>
+
+          <div ng-show="confirmar_recibido" class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a ng-click="confirmar_fun()"  class="btn btn-success">Confirmar Recibido</a>
               </div>
             </div>
-            <div class="col-xs-3">
-              <div class="panel-body  flex-last">
-                <div class="col-xs-6" style="height: 70px; ">
-                  <a ng-show="aceptar" class="btn btn-success">Aceptar Expediente</a>
-                </div>
+          </div>
+
+          <div ng-show="aceptar" class="col-xs-3">
+            <div class="panel-body  flex-last">
+              <div class="col-xs-6" style="height: 70px; ">
+                <a ng-click="aceptar_fun()"  class="btn btn-success">Aceptar Expediente</a>
               </div>
             </div>
-          <div class="col-xs-3">
+          </div>
+
+          <div ng-show="autorizar" class="col-xs-3">
             <div class="panel-body flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a  ng-show="autorizar" class="btn btn-success">Autorizar</a>
+                <a  ng-click="autorizar_fun()"  class="btn btn-success">Autorizar</a>
               </div>
             </div>
           </div>
-          <div class="col-xs-3">
+
+          <div ng-show="modificar" class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a  ng-show="modificar" class="btn btn-warning">Modificar</a>
+                <a  ng-href="/#!/modificar-expediente/{{id}}" class="btn btn-warning">Modificar</a>
               </div>
             </div>
           </div>
-          <div class="col-xs-3">
+
+          <div ng-show="transferir" class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
-                <a ng-show="transferir" class="btn btn-primary">Transferir</a>
+                <a ng-href="/#!/transferir/{{id}}" class="btn btn-primary">Transferir</a>
               </div>
             </div>
           </div>
+
           <div class="col-xs-3">
             <div class="panel-body  flex-last">
               <div class="col-xs-6" style="height: 70px; ">
@@ -231,6 +244,7 @@
               </div>
             </div>
           </div>
+
           </div>
         </section>
       </div>
@@ -240,5 +254,7 @@
 
 
   <cm-footer></cm-footer>
+
+<script src="/src/js/sugarrush.alerts.js"></script>
 </main>
 <cm-scrolltop></cm-scrolltop>
