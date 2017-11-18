@@ -1,7 +1,7 @@
 <cm-sidebar></cm-sidebar>
 <main id="playground">
   <cm-topnavigation></cm-topnavigation>
-    <div ng-if="records.length > 0">
+    <div class="busqueda" ng-if="records.length > 0">
       <section id="page-title" class="row">
         <div class="col-md-12">
           <h1>Resultados</h1>
@@ -21,7 +21,7 @@
             </div>
             <table class="table messages-table table-hover">
               <tbody>
-                <tr ng-repeat="record in records">
+                <tr ng-repeat="record in records" class="unread">
                   <td class="inbox-exp from"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.firma}}</a></div></td>
                   <td class="inbox-exp subject hidden-xs"><div><span class="label label-danger"></span><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.remitente}}</a></div></td>
                   <td class="inbox-exp summary hidden-xs"><div><a ng-href="/#!/detalle-expediente/{{record.id}}">{{record.tipo}}</a></div></td>
