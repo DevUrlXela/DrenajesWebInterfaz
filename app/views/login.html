@@ -11,7 +11,7 @@
               <p>Drenajes y Alcantarillados Xela</p>
             </header>
             <div class="panel-body">
-              <form ng-submit="logearse()">
+              <form ng-keypress="entrar($event)">
                 <div class="form-group">
                   <label for="username">Nombre de Usuario</label>
                   <input ng-model="user" type="text" class="form-control" id="username" placeholder="Usuario">
@@ -33,7 +33,7 @@
                   <p class="text-center"><a href="dashboard.html"><i class="ti-facebook"></i></a> <a href="dashboard.html"><i class="ti-google"></i></a> <a href="dashboard.html"><i class="ti-twitter"></i></a> </p>
                 </div-->
               </form>
-              <hr-->
+              <!-- <hr> -->
               <div class="register-now">
               <a>{{respuesta}}</a>
               </div>

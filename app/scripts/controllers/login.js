@@ -18,4 +18,15 @@ angular.module('drenajesWebInterfazApp')
     })
   }
 
+    $scope.entrar = function(key){
+      if (key.which === 13) {
+        $scope.logearse();
+        // alert('holi');
+      }
+    }
+
+
+
+
+
 });
