@@ -4,7 +4,7 @@ angular.module('drenajesWebInterfazApp')
     // $scope.estado = 'En Espera'
     $scope.busqueda=function(){
       if ($scope.id_expediente != '') {
-        apiService.get('/expedientes/expediente/busqueda/'+$scope.id_expediente+'/',sesion.getToken())
+        apiService.get('/expedientes/expediente/busquedarapida/'+$scope.id_expediente+'/',sesion.getToken())
         .then(function successCallback(response) {
           // console.log(response.data);
           $scope.estado = response.data.estado;
