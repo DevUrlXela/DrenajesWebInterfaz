@@ -1,4 +1,4 @@
 angular.module('drenajesWebInterfazApp')
-  .controller('ErrorCtrl', function ($scope, $location,apiService,sesion) {
-  
-  });
+  .controller('ErrorCtrl', ['$scope', '$location','apiService','sesion', function ($scope, $location,apiService,sesion) {
+
+  }]);

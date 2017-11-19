@@ -1,5 +1,6 @@
+'use strict';
 angular.module('drenajesWebInterfazApp')
-  .controller('ConsultaCtrl', function ($scope, sesion, apiService) {
+  .controller('ConsultaCtrl', [ '$scope', 'sesion', 'apiService',function ($scope, sesion, apiService) {
     $scope.id_expediente = ""
     // $scope.estado = 'En Espera'
     $scope.busqueda=function(){
@@ -58,4 +59,4 @@ angular.module('drenajesWebInterfazApp')
     }
 
 
-})
+}])
