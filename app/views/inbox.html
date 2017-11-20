@@ -2,7 +2,8 @@
 <section id="page-title" class="row">
   <div class="col-md-8">
     <h1>Bandeja de Entrada</h1>
-    <p class="lead">Tiene expedientes pendientes, <span class="label label-danger">{{noleidos}}</span> sin leer.</p>
+    <p ng-if ="noleidos!==0"class="lead">Tiene expedientes pendientes, <span class="label label-danger">{{noleidos}}</span> sin leer.</p>
+    <p ng-if ="noleidos===0"class="lead">No tiene expedientes por leer.</p>
   </div>
 </section>
 <div class="container-fluid white-bg">

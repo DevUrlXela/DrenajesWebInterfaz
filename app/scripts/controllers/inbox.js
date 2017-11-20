@@ -6,7 +6,7 @@ angular.module('drenajesWebInterfazApp')
   $scope.pag = $routeParams.pagina * 1;
   $scope.total_pags;
   $scope.records = [];
-  $scope.noleidos;
+  $scope.noleidos = 0;
 
   $scope.nextPage = function() {
     if($scope.pag + 1 <= $scope.total_pags) {
