@@ -8,7 +8,7 @@ angular.module('drenajesWebInterfazApp')
 
     apiService.get('/expedientes/rol/usuarios/', sesion.getToken())
     .then(function successCallback(response){
-       user_temp = response.data;
+       var user_temp = response.data;
        for(var i = 0; i<user_temp.length;i=i+1){
          if(user_temp[i].id === sesion.getId()){
            user_temp.splice(i,1);

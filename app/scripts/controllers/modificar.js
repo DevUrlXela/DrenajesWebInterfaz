@@ -4,7 +4,7 @@ angular.module('drenajesWebInterfazApp')
     $scope.id = $routeParams.id
     apiService.get( '/expedientes/expediente/informacion/' + $routeParams.id + '/', sesion.getToken())
     .then(function successCallback(response) {
-      d = new Date(response.data.fecha_entrada)
+      var d = new Date(response.data.fecha_entrada)
       $scope.expediente = {
         id : $routeParams.id,
         folio : response.data.numero_folios,

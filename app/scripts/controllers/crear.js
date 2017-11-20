@@ -1,7 +1,7 @@
 'use strict';
 angular.module('drenajesWebInterfazApp')
   .controller('CrearExpCtrl',['$scope','apiService','sesion', function ($scope,apiService,sesion) {
-      d = new Date()
+      var d = new Date()
       $scope.expediente = {
         folio : '',
         fecha : d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear(),
