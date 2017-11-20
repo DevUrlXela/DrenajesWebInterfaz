@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('drenajesWebInterfazApp')
-.controller('InboxCtrl', function ($routeParams, $scope, $http, $location, sesion, apiService) {
+.controller('InboxCtrl', ['$routeParams', '$scope', '$http', '$location', 'sesion', 'apiService', function ($routeParams, $scope, $http, $location, sesion, apiService) {
   $scope.rol = sesion.getRol();
   $scope.pag = $routeParams.pagina * 1;
   $scope.total_pags;
@@ -21,13 +21,14 @@ angular.module('drenajesWebInterfazApp')
   }
 
   $scope.previousPage = function() {
-    if($scope.pag - 1 >= 1)
-    if($routeParams.bandeja == "entrada") {
-      $location.path("/home/entrada/" + (--$scope.pag));
-    } else if($routeParams.bandeja == "transferidos"){
-      $location.path("/home/transferidos/" + (--$scope.pag));
-    } else if($routeParams.bandeja == "finalizados"){
-      $location.path("/home/finalizados/" + (--$scope.pag));
+    if($scope.pag - 1 >= 1){
+      if($routeParams.bandeja == "entrada") {
+        $location.path("/home/entrada/" + (--$scope.pag));
+      } else if($routeParams.bandeja == "transferidos"){
+        $location.path("/home/transferidos/" + (--$scope.pag));
+      } else if($routeParams.bandeja == "finalizados"){
+        $location.path("/home/finalizados/" + (--$scope.pag));
+      }
     }
   }
 
@@ -56,4 +57,4 @@ angular.module('drenajesWebInterfazApp')
   }
 
   fetchData();
-});
+}]);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('drenajesWebInterfazApp')
-  .controller('BusquedaCtrl', function ($scope, $window, $routeParams, sesion, apiService) {
+  .controller('BusquedaCtrl', ['$scope', '$window', '$routeParams', 'sesion', 'apiService', function ($scope, $window, $routeParams, sesion, apiService) {
     $scope.title = 'Resultados';
     $scope.records = [];
     $scope.pag = $routeParams.pag * 1;
@@ -44,4 +44,4 @@ angular.module('drenajesWebInterfazApp')
     }
 
     fetchData();
-  });
+  }]);

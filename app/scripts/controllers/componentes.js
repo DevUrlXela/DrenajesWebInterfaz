@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('drenajesWebInterfazApp')
-  .controller('TopCtrl', function ($scope, $location, sesion, apiService) {
+  .controller('TopCtrl',[ '$scope', '$location', 'sesion', 'apiService', function ($scope, $location, sesion, apiService) {
     $scope.busqueda = '';
     $scope.search = function() {
       $location.path('/resultados/busqueda/' + $scope.busqueda + '/1/');
@@ -23,8 +23,8 @@ angular.module('drenajesWebInterfazApp')
       $scope.noleidos = response.data.numero
     })
 
-  })
-  .controller('SidebarCtrl', function ($scope, sesion) {
+  }])
+  .controller('SidebarCtrl',['$scope', 'sesion', function ($scope, sesion) {
       if(sesion.getRol() == "Secretaria"){
         $scope.esSecretaria = true
       }
@@ -33,4 +33,4 @@ angular.module('drenajesWebInterfazApp')
       }
 
 
-  });
+  }]);

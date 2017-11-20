@@ -20,7 +20,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/home/:bandeja/:pagina', {
         templateUrl: 'views/main.html',
@@ -65,8 +65,8 @@ angular
       .otherwise({
         redirectTo: '/home/entrada/1',
       })
-  })
-  .service('apiService', function($http) {
+  }])
+  .service('apiService', ['$http', function($http) {
     var apiURL = 'http://localhost:8000';
 
     var get = function(endpoint, token) {
@@ -101,10 +101,11 @@ angular
       get: get,
       post: post,
       put: put,
-      del: del
+      del: del,
+      apiURL: apiURL
     };
-  })
-  .service('sesion', function($cookies, apiService){
+  }])
+  .service('sesion',['$cookies','apiService', function($cookies, apiService){
 
     var getToken = function(){
       return $cookies.getObject('sesion').token
@@ -155,7 +156,7 @@ angular
       getRol : getRol,
       getId : getId
     }
-  })
+  }])
   .component('cmFooter', {
     templateUrl: 'views/componentes/footer.html'
   })
@@ -174,7 +175,7 @@ angular
     templateUrl: 'views/inbox.html',
     controller: 'InboxCtrl'
   })
-  .run(function($rootScope, $location, sesion){
+  .run(['$rootScope','$location','sesion', function($rootScope, $location, sesion){
     //al cambiar de rutas
     $rootScope.$on('$routeChangeStart', function()
     {
@@ -185,4 +186,4 @@ angular
           $location.url('/')
         }
     })
-  });
+  }]);

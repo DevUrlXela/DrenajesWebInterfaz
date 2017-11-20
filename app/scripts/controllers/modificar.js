@@ -1,5 +1,6 @@
+'use strict';
 angular.module('drenajesWebInterfazApp')
-  .controller('ModificarCtrl', function ($scope, $routeParams, $location,apiService,sesion) {
+  .controller('ModificarCtrl',['$scope', '$routeParams', '$location','apiService','sesion', function ($scope, $routeParams, $location,apiService,sesion) {
     $scope.id = $routeParams.id
     apiService.get( '/expedientes/expediente/informacion/' + $routeParams.id + '/', sesion.getToken())
     .then(function successCallback(response) {
@@ -75,4 +76,4 @@ angular.module('drenajesWebInterfazApp')
       })
     }
 
-  });
+  }]);

@@ -1,5 +1,6 @@
+'use strict';
 angular.module('drenajesWebInterfazApp')
-  .controller('CrearExpCtrl', function ($scope,apiService,sesion) {
+  .controller('CrearExpCtrl',['$scope','apiService','sesion', function ($scope,apiService,sesion) {
       d = new Date()
       $scope.expediente = {
         folio : '',
@@ -51,4 +52,4 @@ angular.module('drenajesWebInterfazApp')
 
         })
       }
-  });
+  }]);

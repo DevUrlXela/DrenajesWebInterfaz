@@ -100,11 +100,11 @@
               <div class="col-md-4">
                 <a ng-click="generar()" class="btn btn-warning" type="button" name="button">Generar reporte</a>
               </div>
-              <div ng-show="{{mostrar}}" class="col-md-4">
-                <a ng-href="urlexcel" class="btn btn-success" type="button" name="button">Exportar a Excel</a>
+              <div ng-show="mostrar" class="col-md-4">
+                <a ng-href="{{urlexcel}}" target="_blank" class="btn btn-success" type="button" name="button">Exportar a Excel</a>
               </div>
-              <div ng-show="{{mostrar}}" class="col-md-4">
-                <a ng-href="urlpdf"class="btn btn-primary" ype="button" name="button">Exportar a pdf</a>
+              <div ng-show="mostrar" class="col-md-4">
+                <a ng-href="{{urlpdf}}" target="_blank"class="btn btn-primary" ype="button" name="button">Exportar a pdf</a>
               </div>
               <div class="col-md-4">
                 <a href="/#!/home/entrada/1" class="btn btn-danger" ype="button" name="button">Cancelar</a>

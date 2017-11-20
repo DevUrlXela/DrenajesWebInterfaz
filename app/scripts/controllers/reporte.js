@@ -1,5 +1,6 @@
+'use strict';
 angular.module('drenajesWebInterfazApp')
-  .controller('ReporteCtrl', function ($scope, $location,apiService,sesion) {
+  .controller('ReporteCtrl', ['$scope', '$location','apiService','sesion', function ($scope, $location,apiService,sesion) {
       d = new Date()
       $scope.fecha_inicio = d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear()
       $scope.fecha_fin = d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear()
@@ -37,8 +38,12 @@ angular.module('drenajesWebInterfazApp')
               // document.body.appendChild(link);
               // link.click();
               // document.body.removeChild(link);
-              $scope.urlexcel = response.data.url
-              $scope.reporte = true
+              $scope.urlexcel = apiService.apiURL + response.data.url
+              $scope.mostrar = true
+              swal({
+                title: "Reporte Generado",
+                type: "success"
+                });
             })
           }
           else{
@@ -49,4 +54,4 @@ angular.module('drenajesWebInterfazApp')
           }
       }
 
-  });
+  }]);
